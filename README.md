@@ -45,3 +45,8 @@
 - [11-react-freelando-part-01](./REACT/11-react-freelando-part-01)
 - [12-react-freelando-part-02](./REACT/12-react-freelando-part-02)
 - [13-react-freelando-part-03](./REACT/13-react-freelando-part-03)
+- [14-trato-tech](./REACT/14-trato-tech)
+- [15-trato-tech-immer](./REACT/15-trato-tech-immer)
+- [16-trato-tech-thunk-part-01](./REACT/16-trato-tech-thunk-part-01)
+- [17-trato-tech-thunk-part-02](./REACT/17-trato-tech-thunk-part-02)
+- [18-trato-tech-thunk-saga-part-03](./REACT/18-trato-tech-thunk-saga-part-03)
