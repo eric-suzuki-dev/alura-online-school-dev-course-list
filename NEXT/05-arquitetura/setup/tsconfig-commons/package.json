@@ -1,0 +1,13 @@
+{
+  "name": "@alura/tsconfig-commons",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "base.json"
+  ],
+  "scripts": {
+    "lint": "echo 'Not implemented'",
+    "test": "echo 'Not implemented'"
+  }
+}
