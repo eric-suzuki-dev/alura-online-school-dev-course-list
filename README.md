@@ -9,9 +9,9 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 - [HTML and CSS](#html-and-css)
 - [JavaScript](#javascript)
 - [React](#react)
+- [Next.js](#nextjs)
 - [Course List](#course-list)
 <!-- - [TypeScript](#typescript) -->
-<!-- - [Next.js](#nextjs) -->
 
 ## HTML and CSS
 
@@ -56,7 +56,7 @@ TypeScript is a superset of JavaScript that adds static typing. This section wil
 - Type Annotations
 - Interfaces and Types
 - Generics
-- Advanced TypeScript Features
+- Advanced TypeScript Features -->
 
 ## Next.js
 
@@ -67,7 +67,7 @@ Next.js is a React framework that enables server-side rendering and static site 
 - Pages and Routing
 - Static Generation (SSG) and Server-Side Rendering (SSR)
 - API Routes
-- Deployment -->
+- Deployment
 
 ## Getting Started
 
@@ -129,6 +129,18 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [16-trato-tech-thunk-part-01](./REACT/16-trato-tech-thunk-part-01)
 - [17-trato-tech-thunk-part-02](./REACT/17-trato-tech-thunk-part-02)
 - [18-trato-tech-thunk-saga-part-03](./REACT/18-trato-tech-thunk-saga-part-03)
+
+
+# NEXT
+- [01-nextjs-course](./NEXT/01-nextjs-course)
+- [02-nextjs-course](./NEXT/02-nextjs-course)
+- [03-next-3-jwt](./NEXT/03-next-3-jwt)
+- [04-nextjs-cms](./NEXT/04-nextjs-cms)
+- [05-arquitetura](./NEXT/05-arquitetura)
+- [06-github-actions](./NEXT/06-github-actions)
+- [07-storybook-next](./NEXT/07-storybook-next)
+- [08-Next.js-FullStack-part-01](./NEXT/08-Next.js-FullStack-part-01)
+- [09-Next.js-FullStack-part-02](./NEXT/09-Next.js-FullStack-part-02)
 
 ## Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
