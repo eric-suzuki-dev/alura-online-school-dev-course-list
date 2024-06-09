@@ -3,8 +3,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 // Supabase Setup
 // =========
-const SUPABASE_URL = "https://dioobnzigwzcfgbhaach.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRpb29ibnppZ3d6Y2ZnYmhhYWNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAwOTQ1MTcsImV4cCI6MTk4NTY3MDUxN30.X45Voa4O0V-Nh2WtflqQOLN5ZmB738eMDr1H3eXcxGY";
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const dbClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 // =========
 
@@ -32,7 +32,7 @@ const controllerByMethod = {
 
     res
       .status(httpStatus.Success)
-      .json({ message: "Get request!", data });
+      .json({ message: "Get request!", total: data.length });
   }
 }
 
