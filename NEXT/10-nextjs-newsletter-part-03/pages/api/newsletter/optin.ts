@@ -9,6 +9,7 @@ const httpStatus = {
 
 const controllerByMethod = {
   POST(req: NextApiRequest, res: NextApiResponse) { // Cria coisas
+    console.log(req.body.emailNewsletter);
     res
       .status(httpStatus.Success)
       .json({ message: "Post request!" });
