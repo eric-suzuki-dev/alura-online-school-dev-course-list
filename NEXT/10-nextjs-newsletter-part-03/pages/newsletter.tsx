@@ -42,11 +42,11 @@ export default function NewsletterScreen() {
         console.log("Estamos enviando os dados do formulario!");
 
         // Validar 
-        if(!form.values.emailNewsletter.includes("@")) {
-          alert("Você precisa informar um email valido!");
-          return;
-        }
-        alert("Você foi cadastrado com sucesso! Cheque seu email para garantir")
+        // if(!form.values.emailNewsletter.includes("@")) {
+        //   alert("Você precisa informar um email valido!");
+        //   return;
+        // }
+        // alert("Você foi cadastrado com sucesso! Cheque seu email para garantir")
 
         // Enviar para o servidor o email da pessoa
         fetch("/api/newsletter/optin", {
