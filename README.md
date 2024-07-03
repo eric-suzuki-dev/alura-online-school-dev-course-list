@@ -8,10 +8,10 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 
 - [HTML and CSS](#html-and-css)
 - [JavaScript](#javascript)
+- [TypeScript](#typescript)
 - [React](#react)
 - [Next.js](#nextjs)
 - [Course List](#course-list)
-<!-- - [TypeScript](#typescript) -->
 
 ## HTML and CSS
 
@@ -35,6 +35,17 @@ JavaScript is the programming language of the web. In this section, you will lea
 - Asynchronous JavaScript
 - Fetch API and AJAX
 
+## TypeScript
+
+TypeScript is a superset of JavaScript that adds static typing. This section will teach you how to use TypeScript to write more robust and maintainable code.
+
+### Topics Covered
+- Introduction to TypeScript
+- Type Annotations
+- Interfaces and Types
+- Generics
+- Advanced TypeScript Features
+  
 ## React
 
 React is a popular JavaScript library for building user interfaces. This section will guide you through the core concepts and help you build dynamic and interactive web applications.
@@ -46,17 +57,6 @@ React is a popular JavaScript library for building user interfaces. This section
 - Lifecycle Methods
 - Hooks
 - React Router
-
-<!-- ## TypeScript
-
-TypeScript is a superset of JavaScript that adds static typing. This section will teach you how to use TypeScript to write more robust and maintainable code.
-
-### Topics Covered
-- Introduction to TypeScript
-- Type Annotations
-- Interfaces and Types
-- Generics
-- Advanced TypeScript Features -->
 
 ## Next.js
 
@@ -110,6 +110,20 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [16-bytebank](./JAVASCRIPT/16-bytebank)
 
 
+### TypeScript
+- [01-bytebank](./TYPESCRIPT/01-bytebank)
+- [02-bytebank-part-02](./TYPESCRIPT/02-bytebank-part-02)
+- [03-fokus-ts](./TYPESCRIPT/03-fokus-ts)
+- [04-studies](./TYPESCRIPT/04-studies)
+- [05-aluroni-router](./TYPESCRIPT/05-aluroni-router)
+- [06-alfood](./TYPESCRIPT/06-alfood)
+- [07-event-tracker](./TYPESCRIPT/07-event-tracker)
+- [08-sorteador-de-amigo-secreto](./TYPESCRIPT/08-sorteador-de-amigo-secreto)
+- [09-aluroni-performance](./TYPESCRIPT/09-aluroni-performance)
+- [10-typescript-01](./TYPESCRIPT/10-typescript-01)
+- [11-typescript-02](./TYPESCRIPT/11-typescript-02)
+
+  
 ### REACT
 - [01-react-dev-javascript](https://github.com/usuario/01-react-dev-javascript)
 - [02-organo](./REACT/02-organo)
@@ -131,7 +145,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [18-trato-tech-thunk-saga-part-03](./REACT/18-trato-tech-thunk-saga-part-03)
 
 
-# NEXT
+### NEXT
 - [01-nextjs-course](./NEXT/01-nextjs-course)
 - [02-nextjs-course](./NEXT/02-nextjs-course)
 - [03-next-3-jwt](./NEXT/03-next-3-jwt)
