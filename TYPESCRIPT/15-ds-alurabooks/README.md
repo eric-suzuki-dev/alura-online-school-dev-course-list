@@ -25,6 +25,7 @@ Se liga nessa lista de tudo que usaremos nessa formação:
 - `TSDX`
 - `NPM` (no primeiro curso nós criamos uma biblioteca e a publicamos no NPM)
 - `Github Actions`
+<!-- - `Github Actions` -->
 
 E muito mais!
 
