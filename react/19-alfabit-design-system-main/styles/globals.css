@@ -4,10 +4,31 @@
 
 @layer base {
   :root {
-    --primary: #2D5BFF;
+    --primary: 45, 91, 255;
+    --secondary: 98, 132, 253;
+    --tertiary: 150, 173, 255;
+    --quaternary: 236, 240, 255;
+  
+    --hover: 27, 74, 240;
+    --click: 0, 46, 208;
+    --icon: 124, 123, 123;
+    --outline: 215, 215, 215;
+    --divider: 237, 237, 237;
+  
+    --bg-light: 255, 255, 255;
+    --bg-dark: 248, 248, 248;
+    --bg-disabled: 239, 239, 239;
+  
+    --text-primary: 24, 24, 24;
+    --text-secondary: 92, 92, 92;
+    --text-tertiary: 116, 116, 116;
+    --text-disabled: 138, 138, 138;
   }
 
   .theme-violet {
-    --primary: #AF4BFE;
+    --primary: 175, 75, 254;
+    --secondary: 190, 116, 249;
+    --tertiary: 226, 189, 255;
+    --quaternary: 245, 232, 255;
   }
 }
