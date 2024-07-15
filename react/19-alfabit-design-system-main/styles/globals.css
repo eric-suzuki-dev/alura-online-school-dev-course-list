@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish-Regular.woff2') format('woff2'),
+    url('../fonts/Mulish-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+}
+
 @layer base {
   :root {
     /* Colors */
@@ -41,6 +54,31 @@
 
     /* Blur */
     --blur: 4px;
+
+    /* Spacing */
+    --spacing-none: 0px;
+    --spacing-4xs: 8px;
+    --spacing-2xs: 12px;
+    --spacing-xs: 16px;
+    --spacing-sm: 20px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 48px;
+    --spacing-4xl: 56px;
+
+    /* Border Radius */
+    --border-radius-none: 0px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+
+    /* Font Size */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
   }
 
   .theme-violet {
