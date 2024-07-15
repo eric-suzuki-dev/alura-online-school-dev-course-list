@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #2D5BFF;
+  }
+
+  .theme-violet {
+    --primary: #AF4BFE;
+  }
+}
