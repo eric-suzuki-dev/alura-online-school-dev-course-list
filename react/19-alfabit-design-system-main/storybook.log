@@ -1,0 +1,22 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: alfabit-design-system@0.1.0
+npm ERR! Found: storybook@7.6.20
+npm ERR! node_modules/storybook
+npm ERR!   dev storybook@"^7.0.12" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer storybook@"^8.2.2" from @storybook/addon-onboarding@8.2.2
+npm ERR! node_modules/@storybook/addon-onboarding
+npm ERR!   dev @storybook/addon-onboarding@"*" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! C:\Users\ey-su\AppData\Local\npm-cache\_logs\2024-07-15T02_28_51_262Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: C:\Users\ey-su\AppData\Local\npm-cache\_logs\2024-07-15T02_28_51_262Z-debug-0.log
