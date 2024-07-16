@@ -11,7 +11,7 @@ function getVariant(variant: ButtonProps['variant'], disabled: ButtonProps['disa
       return disabled ? 'bg-disabled text-disabled' : 'bg-quaternary text-primary'
     case 'tertiary':
     default:
-      return disabled ? '' : ''
+      return disabled ? 'text-disabled' : 'text-primary'
   }
 }
 
