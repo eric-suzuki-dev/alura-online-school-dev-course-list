@@ -55,13 +55,19 @@ module.exports = {
         icon: 'rgba(var(--icon), <alpha-value>)',
         outline: 'rgba(var(--outline), <alpha-value>)',
         divider: 'rgba(var(--divider), <alpha-value>)',
-        'bg-light': 'rgba(var(--bg-light), <alpha-value>)',
-        'bg-dark': 'rgba(var(--bg-dark), <alpha-value>)',
-        'bg-disabled': 'rgba(var(--bg-disabled), <alpha-value>)',
-        'text-primary': 'rgba(var(--text-primary), <alpha-value>)',
-        'text-secondary': 'rgba(var(--text-secondary), <alpha-value>)',
-        'text-tertiary': 'rgba(var(--text-tertiary), <alpha-value>)',
-        'text-disabled': 'rgba(var(--text-disabled), <alpha-value>)',
+      },
+      backgroundColor: {
+        light: 'rgba(var(--bg-light), <alpha-value>)',
+        dark: 'rgba(var(--bg-dark), <alpha-value>)',
+        disabled: 'rgba(var(--bg-disabled), <alpha-value>)',
+      },
+      textColor: {
+        gray: {
+          primary: 'rgba(var(--text-primary), <alpha-value>)',
+          secondary: 'rgba(var(--text-secondary), <alpha-value>)',
+          tertiary: 'rgba(var(--text-tertiary), <alpha-value>)',
+        },
+        disabled: 'rgba(var(--text-disabled), <alpha-value>)',
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
