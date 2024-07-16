@@ -16,9 +16,56 @@ export const Primary: StoryObj<InputProps> = {
   }
 }
 
-export const Disabled: StoryObj<InputProps> = {
+export const Multiline: StoryObj<InputProps> = {
   args: {
     value: 'Input',
+    multiline: true
+  }
+}
+
+export const PrimaryDisabled: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    disabled: true
+  }
+}
+
+export const MultilineDisabled: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    multiline: true,
+    disabled: true
+  }
+}
+
+export const PrimaryLabel: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    label: 'Label'
+  }
+}
+
+export const PrimaryLabelDisabled: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    label: 'Label',
+    disabled: true
+  }
+}
+
+export const MultilineLabel: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    multiline: true,
+    label: 'Label'
+  }
+}
+
+export const MultilineLabelDisabled: StoryObj<InputProps> = {
+  args: {
+    value: 'Input',
+    multiline: true,
+    label: 'Label',
     disabled: true
   }
 }
