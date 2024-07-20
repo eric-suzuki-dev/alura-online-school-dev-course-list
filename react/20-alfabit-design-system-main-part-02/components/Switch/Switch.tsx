@@ -40,7 +40,7 @@ const Switch = ({
       <span className="sr-only">switch toggle</span>
       {variant === "common" && <span className={style.Switch} />}
       {variant === "contract" && (
-        <span>
+        <span className={style.Switch}>
           {enabled && (
             <CheckIcon className={style.Icon} aria-disabled={disabled} />
           )}
