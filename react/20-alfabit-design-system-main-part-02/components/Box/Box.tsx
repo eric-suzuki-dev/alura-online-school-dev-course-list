@@ -1,5 +1,5 @@
+import classNames from "classnames";
 import React from "react";
-import { Secondary } from "../Button/Button.stories";
 
 export type BoxProps = {
   rounded?: boolean;
@@ -27,5 +27,17 @@ const Box = ({
   className,
   ...rest
 }: BoxProps) => {
-  return <div {...rest}>{children}</div>;
+  const classes = classNames({
+    "rounded-md": rounded,
+    "border border-gray-100": border,
+    "bg-dark": filledBackground,
+    [boxClassMap[type]]: type,
+  });
+  return (
+    <div className={classes} {...rest}>
+      {children}
+    </div>
+  );
 };
+
+export default Box;
