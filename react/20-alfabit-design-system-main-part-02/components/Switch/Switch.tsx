@@ -4,13 +4,14 @@ import {
 } from "@headlessui/react";
 import { useState } from "react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import useStyle from "./Switch.style";
 
 export type SwitchProps = {
   defaultEnable?: boolean;
   variant?: "common" | "contract";
   disabled?: boolean;
   onChange?: (enabled: boolean) => void;
-};
+} & HeadlessSwitchProps<any>;
 
 const Switch = ({
   defaultEnable: enabledByDefault,
@@ -20,6 +21,7 @@ const Switch = ({
   ...rest
 }: SwitchProps) => {
   const [enabled, setEnabled] = useState(enabledByDefault);
+  const style = useStyle({ variant, enabled, disabled });
 
   const toggle = () => {
     const newState = !enabled;
@@ -32,13 +34,19 @@ const Switch = ({
       checked={enabled}
       onChange={toggle}
       disabled={disabled}
+      className={style.Container}
       {...rest}
     >
-      {variant === "common" && <span />}
+      <span className="sr-only">switch toggle</span>
+      {variant === "common" && <span className={style.Switch} />}
       {variant === "contract" && (
         <span>
-          {enabled && <CheckIcon aria-disabled={disabled} />}
-          {enabled || <XMarkIcon aria-disabled={disabled} />}
+          {enabled && (
+            <CheckIcon className={style.Icon} aria-disabled={disabled} />
+          )}
+          {enabled || (
+            <XMarkIcon className={style.Icon} aria-disabled={disabled} />
+          )}
         </span>
       )}
     </HeadlessSwitch>
