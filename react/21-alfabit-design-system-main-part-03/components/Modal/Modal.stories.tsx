@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Modal, { type ModalProps } from "./Modal";
 import Button from "../Button/Button";
 import Typography from "../Typography/Typography";
+import { type } from "os";
 
 // eslint-disable-next-line storybook/default-exports
 const ModalStoryInfo = (args: ModalProps) => {
@@ -31,4 +32,29 @@ const ModalStoryInfo = (args: ModalProps) => {
       </Modal>
     </>
   );
+};
+
+const meta: Meta<typeof Modal> = {
+  title: "Molecules/Modal",
+  component: Modal,
+  decorators: [
+    (Story) => (
+      <div style={{ margin: "3em" }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export default meta;
+type Story = StoryObj<typeof Modal>;
+
+export const ModalInfo: Story = {
+  args: {
+    isOpen: false,
+    title: "Modal Info",
+  },
+  render: (args: ModalProps) => {
+    return <ModalStoryInfo {...args} />;
+  },
 };
