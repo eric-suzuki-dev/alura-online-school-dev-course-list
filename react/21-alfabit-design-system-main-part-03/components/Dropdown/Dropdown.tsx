@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { dropdownStyles } from "./Dropdown.style";
 
 export type DropdownProps = {
   list: string[];
@@ -19,14 +20,16 @@ const Dropdown = ({ list, ...rest }: DropdownProps) => {
 
   return (
     <Combobox value={selectedItem} onChange={setSelectedItem} {...rest}>
-      <div>
-        <div>
+      <div className={dropdownStyles.container}>
+        <div className={dropdownStyles.containerMenu}>
           <Combobox.Input
+            className={dropdownStyles.input}
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)}
           />
-          <Combobox.Button>
+          <Combobox.Button className={dropdownStyles.button}>
             <ChevronDownIcon
+              className="h-5 w-5 text-primary"
               aria-hidden="true"
             />
           </Combobox.Button>
@@ -38,18 +41,27 @@ const Dropdown = ({ list, ...rest }: DropdownProps) => {
           leaveTo="opacity-0"
           afterLeave={() => setQuery("")}
         >
-          <Combobox.Options>
+          <Combobox.Options className={dropdownStyles.optionsContainer}>
             {filteredItem.length === 0 && query !== "" ? (
-              <div>Nenhum selecionado.</div>
+              <div className={dropdownStyles.noResult}>Nenhum selecionado.</div>
             ) : (
               filteredItem.map((item) => (
                 <Combobox.Option
+                  className={({ active }) =>
+                    `${dropdownStyles.option} ${
+                      active ? "bg-dark text-gray-primary" : "text-gray-900"
+                    }`
+                  }
                   key={item}
                   value={item}
                 >
                   {({ selected }) => (
                     <>
-                      <span>
+                      <span
+                        className={`block truncate ${
+                          selected ? "font-medium text-primary" : "font-normal"
+                        }`}
+                      >
                         {item}
                       </span>
                     </>
