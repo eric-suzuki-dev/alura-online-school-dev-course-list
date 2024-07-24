@@ -17,7 +17,7 @@
  <img alt="Repository size" src="https://img.shields.io/github/repo-size/NeiltonSeguins/alfabit-design-system-project?color=4e5acf">
 
   <a aria-label="Last Commit" href="https://github.com/NeiltonSeguins/alfabit-design-system-project/commits/main">
-  <img alt="Last commit on GitHub" src="https://img.shields.io/github/last-commit/NeiltonSeguins/alfabit-design-system-project?color=4e5acf">
+  <img alt="Last commit on GitHub" src="https://img.shields.io/github/last-commit/NeiltonSeguins/alfabit-ds-pkg?color=4e5acf">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-4e5acf">
   </a>
 </p>
@@ -37,7 +37,7 @@
   <a target="_blank" href="https://tailwindcss.com/">
     <img src="https://img.shields.io/static/v1?color=blue&label=Tailwind&message=CSS&?style=plastic&logo=TailwindCSS">
   </a>
-  <a target="_blank" href="https://tailwindcss.com/">
+  <a target="_blank" href="https://www.figma.com/">
     <img src="https://img.shields.io/static/v1?color=red&label=Figma&message=  &?style=plastic&logo=Figma">
   </a>
 </p>
@@ -74,7 +74,7 @@ A biblioteca Alfabit-ds foi criada para funcionar em aplicações Next.js+Tailwi
     ```tsx
     const config = {
     	presets: [
-    		require('<nome_do_modulo>/tailwind.config')
+    		require('alfabit-ds/tailwind.config')
     	]
     	// ... demais configurações ...
     }
@@ -88,7 +88,7 @@ A biblioteca Alfabit-ds foi criada para funcionar em aplicações Next.js+Tailwi
         './pages/**/*.{js,ts,jsx,tsx,mdx}',
         './components/**/*.{js,ts,jsx,tsx,mdx}',
         './app/**/*.{js,ts,jsx,tsx,mdx}',
-        './node_modules/<nome_do_modulo>/components/**/*.{js,ts,jsx,tsx,mdx}'
+        './node_modules/alfabit-ds/components/**/*.{js,ts,jsx,tsx,mdx}'
       ]
     	// ... demais configurações ...
     }
@@ -99,7 +99,7 @@ A biblioteca Alfabit-ds foi criada para funcionar em aplicações Next.js+Tailwi
     ```jsx
     /** @type {import('next').NextConfig} */
     const nextConfig = {
-      transpilePackages: ["ds-alfabit-v1"],
+      transpilePackages: ["alfabit-ds"],
     };
     
     module.exports = nextConfig;
@@ -133,13 +133,13 @@ Toda a identidade visual da biblioteca, como os componentes, espaçamentos e cor
 ## 📚 Quais dependências são usadas nesta biblioteca?
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
-- [TailwindCSS](https://www.npmjs.com/package/tailwindcss)
-- [Storybook](https://www.npmjs.com/package/storybook)
-- [Class Variance Authority (cva)](https://www.npmjs.com/package/class-variance-authority)
-- [classnames](https://www.npmjs.com/package/classnames)
-- [HeadlessUI](https://www.npmjs.com/package/@headlessui/react)
-- [heroicons](https://www.npmjs.com/package/@heroicons/react)
-- [Chromatic](https://www.npmjs.com/package/chromatic)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/docs/react/get-started/introduction)
+- [Class Variance Authority (cva)](https://cva.style/docs)
+- [classnames](https://github.com/JedWatson/classnames)
+- [HeadlessUI](https://headlessui.com/)
+- [heroicons](https://heroicons.com/)
+- [Chromatic](https://www.chromatic.com/)
 
 ## 📝 Documentação
 
