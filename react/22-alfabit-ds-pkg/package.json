@@ -1,5 +1,5 @@
 {
-  "name": "alfabit-design-system",
+  "name": "alfabit-ds",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -41,5 +41,15 @@
     "@storybook/theming": "^7.3.1",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.3.1"
-  }
+  },
+  "description": "![3267 - React: Versione e publique o seu Design System](thumb.png)",
+  "main": "components/index.ts",
+  "author": "Alfabit",
+  "license": "ISC",
+  "files": [
+    "styles/globals.css",
+    "tailwind.config.js",
+    "components/*",
+    "fonts/*"
+  ]
 }
