@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  children: React.ReactNode;
+  children: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
