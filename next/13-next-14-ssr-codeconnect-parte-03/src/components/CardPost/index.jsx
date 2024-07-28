@@ -2,6 +2,8 @@ import Image from "next/image"
 import { Avatar } from "../Avatar"
 import styles from './cardpost.module.css'
 import Link from "next/link"
+import { IconButton } from "../IconButton"
+import { ThumbsUp } from "../icons/ThumbsUp"
 
 export const CardPost = ({ post, highlight }) => {
     return (
@@ -21,6 +23,16 @@ export const CardPost = ({ post, highlight }) => {
                 <Link href={`/posts/${post.slug}`}>Ver detalhes</Link>
             </section>
             <footer className={styles.footer}>
+                <div>
+                    <form>
+                        <IconButton>
+                            <ThumbsUp />
+                        </IconButton>
+                    </form>
+                    <p>
+                        {post.likes}
+                    </p>
+                </div>
                 <Avatar
                     imageSrc={post.author.avatar}
                     name={post.author.username}
