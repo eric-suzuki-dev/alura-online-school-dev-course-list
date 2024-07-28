@@ -8,7 +8,11 @@ import db from "../../prisma/db"
 async function getAllPosts (page) {
   try {
 
+    const perPage = 6;
+
     const posts = await db.post.findMany({
+      take: perPage,
+      orderBy: { createdAt: 'desc' },
       include: {
         author: true
       }
