@@ -2,7 +2,9 @@
 
 import { forwardRef, useImperativeHandle, useRef } from "react"
 
-const Modal = forwardRef(({ childrem }, ref) => {
+import styles from './modal.module.css'
+
+export const Modal = forwardRef(({ children }, ref) => {
 
     const dialogRef = useRef(null)
 
@@ -21,11 +23,12 @@ const Modal = forwardRef(({ childrem }, ref) => {
         }
     })
 
-    return (<dialog ref={dialogRef}>
-        <header>
+    return (<dialog className={styles.dialog} ref={dialogRef}>
+        <header className={styles.header}>
             <button>
                 X
             </button>
         </header>
+        {children}
     </dialog>)
 })
