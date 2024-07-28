@@ -41,10 +41,16 @@ export async function postComment(post, formData) {
     revalidatePath(`/${post.slug}`)
 }
 
-export async function postReply(post, parent, formData) {
+export async function postReply(parent, formData) {
     const author = await db.user.findFirst({
         where: {
             username: 'anabeatriz_dev'
+        }
+    })
+
+    const post = await db.post.findFirst({
+        where: {
+            id: parent.postId
         }
     })
 
@@ -56,6 +62,5 @@ export async function postReply(post, parent, formData) {
             parentId: parent.parentId ?? parent.id
         }
     })
-
     revalidatePath(`/${post.slug}`)
 }
