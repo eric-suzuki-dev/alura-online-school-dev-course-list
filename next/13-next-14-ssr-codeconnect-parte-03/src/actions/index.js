@@ -40,3 +40,22 @@ export async function postComment(post, formData) {
     revalidatePath('/')
     revalidatePath(`/${post.slug}`)
 }
+
+export async function postReply(post, parent, formData) {
+    const author = await db.user.findFirst({
+        where: {
+            username: 'anabeatriz_dev'
+        }
+    })
+
+    await db.comment.create({
+        data: {
+            text: formData.get('text'),
+            authorId: author.id,
+            postId: post.id,
+            parentId: parent.parentId ?? parent.id
+        }
+    })
+
+    revalidatePath(`/${post.slug}`)
+}
