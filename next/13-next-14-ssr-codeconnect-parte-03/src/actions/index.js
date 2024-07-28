@@ -1,4 +1,3 @@
-
 'use server'
 
 import { revalidatePath } from "next/cache";
@@ -16,6 +15,25 @@ export async function incrementThumbsUp(post) {
             likes: {
                 increment: 1
             }
+        }
+    })
+
+    revalidatePath('/')
+    revalidatePath(`/${post.slug}`)
+}
+
+export async function postComment(post, formData) {
+    const author = await db.user.findFirst({
+        where: {
+            username: 'anabeatriz_dev'
+        }
+    })
+
+    await db.comment.create({
+        data: {
+            text: formData.get('text'),
+            authorId: author.id,
+            postId: post.id
         }
     })
 
