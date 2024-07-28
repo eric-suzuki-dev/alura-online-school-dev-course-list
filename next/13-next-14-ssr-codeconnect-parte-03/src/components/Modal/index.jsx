@@ -25,7 +25,7 @@ export const Modal = forwardRef(({ children }, ref) => {
 
     return (<dialog className={styles.dialog} ref={dialogRef}>
         <header className={styles.header}>
-            <button>
+            <button onClick={closeModal}>
                 X
             </button>
         </header>
