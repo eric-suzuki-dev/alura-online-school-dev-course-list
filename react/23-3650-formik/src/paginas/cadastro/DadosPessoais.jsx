@@ -5,8 +5,8 @@ import { ListaSupensa } from "../../componentes/ListaSuspensa/ListaSuspensa"
 import { Col, Row } from "react-grid-system"
 import { Botao } from "../../componentes/Botao/Botao"
 import { Link } from "react-router-dom"
-import { Formik } from 'formik';
-
+import { Field, Form, Formik } from 'formik';
+import * as Yup from 'yup';
 const estadosBrasileiros = [
     { "text": "Acre", "value": "AC" },
     { "text": "Alagoas", "value": "AL" },
@@ -36,6 +36,26 @@ const estadosBrasileiros = [
     { "text": "Sergipe", "value": "SE" },
     { "text": "Tocantins", "value": "TO" }
 ]
+
+const formatarTelefone = (valor) => {
+    if (!value) return
+
+    const telefone = valor.replace(/\D/g, "")
+
+    return `(${telefone.slice(0, 2)}) ${telefone.slice(2, 7)}-${telefone.slice(7)}`
+}
+
+const schema = Yup.object().shape({
+    nome: Yup.string().trim().lowercase().required('Campo obrigatório').min(2, 'Digite seu nome completo'),
+    cidade: Yup.string().uppercase().required('Campo obrigatório').max(58, 'Digite uma cidade válida'),
+    estado: Yup.string().required('Campo obrigatório'),
+    email: Yup.string().required('Campo obrigatório').email('Digite um e-mail válido'),
+    telefone: Yup.string().required('Campo obrigatório').matches(/^\d{11}$/, 'Número de telefone inválido').transform(formatarTelefone),
+    senha: Yup.string().required('Campo obrigatório'),
+    confirmarSenha: Yup.string().required('Campo obrigatório').oneOf([Yup.ref('senha'), null], 'As senhas não conferem'),
+    termos: Yup.boolean().required('Campo obrigatório').oneOf([true], 'Você deve aceitar os termos'),
+    nascimento: Yup.date().required('Campo obrigatório').max(new Date(), 'Digite uma data válida')
+})
 const DadosPessoais = () => {
     return (
         <Formik initialValues={{
@@ -46,113 +66,108 @@ const DadosPessoais = () => {
             email: '',
             senha: '',
             confirmarSenha: ''
-        }}>
-            <form>
-                <div style={{ textAlign: 'center' }}>
-                    <Tipografia variante="h1" componente="h1">
-                        Crie seu cadastro
-                    </Tipografia>
-                    <Tipografia variante="body" componente="body">
-                        Crie seu perfil gratuitamente para começar a trabalhar com os melhores freelancers. Em seguida, você poderá dar mais detalhes sobre suas demandas e sobre sua forma de trabalho.
-                    </Tipografia>
-                </div>
-                <Row>
-                    <Col>
-                        <CampoTexto
-                            titulo="Nome completo"
-                            name="nome"
-                            valor={formik.values.nome}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            type="text"
-                            required
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={4} md={4} sm={4}>
-                        <ListaSupensa
-                            titulo="Estado"
-                            opcoes={estadosBrasileiros}
-                            valor={formik.values.estado}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                        />
-                    </Col>
-                    <Col lg={8} md={8} sm={8}>
-                        <CampoTexto
-                            titulo="Cidade"
-                            valor={formik.values.cidade}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            tipo='text'
-                            required
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={6} md={6} sm={6}>
-                        <CampoTexto
-                            titulo="E-mail"
-                            valor={formik.values.email}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            tipo='email'
-                            required
-                        />
-                    </Col>
-                    <Col lg={6} md={6} sm={6}>
-                        <CampoTexto
-                            titulo="Telefone"
-                            valor={formik.values.telefone}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            tipo='tel'
-                            required
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={6} md={6} sm={6}>
-                        <CampoTexto
-                            titulo="Senha"
-                            valor={formik.values.senha}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            tipo='password'
-                            required
-                        />
-                    </Col>
-                    <Col lg={6} md={6} sm={6}>
-                        <CampoTexto
-                            titulo="Confirme sua senha"
-                            valor={formik.values.confirmarSenha}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            tipo='password'
-                            required
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={6} md={6} sm={6}>
-                        <Link to="/cadastro/interesses">
-                            <Botao variante="secundaria">
-                                Anterior
-                            </Botao>
-                        </Link>
-                    </Col>
-                    <Col lg={6} md={6} sm={6}>
-                        <div style={{ textAlign: 'right' }}>
-                            {/* <Link to='/cadastro/concluido'> */}
-                            <Botao>
-                                Próxima
-                            </Botao>
-                            {/* </Link> */}
-                        </div>
-                    </Col>
-                </Row>
-            </form>
+        }}
+            validationSchema={schema}
+            onSubmit={(values) => {
+                console.log('dados do formulário', values)
+            }}
+        >
+            {formik => (
+                <Form onSubmit={formik.handleSubmit}>
+                    <div style={{ textAlign: 'center' }}>
+                        <Tipografia variante="h1" componente="h1">
+                            Crie seu cadastro
+                        </Tipografia>
+                        <Tipografia variante="body" componente="body">
+                            Crie seu perfil gratuitamente para começar a trabalhar com os melhores freelancers. Em seguida, você poderá dar mais detalhes sobre suas demandas e sobre sua forma de trabalho.
+                        </Tipografia>
+                    </div>
+                    <Row>
+                        <Col>
+                            <CampoTexto
+                                titulo="Nome completo"
+                                name='nome'
+                                type='text'
+                            />
+                        </Col>
+                        <Col>
+                            <CampoTexto titulo='Data de nascimento' name='nascimento' type='date' />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={4} md={4} sm={4}>
+                            <ListaSupensa
+                                titulo="Estado"
+                                opcoes={estadosBrasileiros}
+                            />
+                        </Col>
+                        <Col lg={8} md={8} sm={8}>
+                            <CampoTexto
+                                titulo="Cidade"
+                                name='cidade'
+                                type='text'
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={6} md={6} sm={6}>
+                            <CampoTexto
+                                titulo="E-mail"
+                                name='email'
+                                type='email'
+                            />
+                        </Col>
+                        <Col lg={6} md={6} sm={6}>
+                            <CampoTexto
+                                titulo="Telefone"
+                                name='telefone'
+                                type='tel'
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={6} md={6} sm={6}>
+                            <CampoTexto
+                                titulo="Senha"
+                                name='senha'
+                                tipo='password'
+                            />
+                        </Col>
+                        <Col lg={6} md={6} sm={6}>
+                            <CampoTexto
+                                titulo="Confirme sua senha"
+                                name='confirmarSenha'
+                                tipo='password'
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Field type='checkbox' name='termos' id='termos' />
+                        <label>Aceito os termos e condições</label>
+                    </Row>
+                    {formik.errors.termos ? (
+                        <div style={{ color: 'red', marginTop: '4px' }}>{formik.errors.termos}</div>
+                    ) : null}
+                    <Row>
+                        <Col lg={6} md={6} sm={6}>
+                            <Link to="/cadastro/interesses">
+                                <Botao variante="secundaria">
+                                    Anterior
+                                </Botao>
+                            </Link>
+                        </Col>
+                        <Col lg={6} md={6} sm={6}>
+                            <div style={{ textAlign: 'right' }}>
+                                {/* <Link to='/cadastro/concluido'> */}
+                                <Botao>
+                                    Próxima
+                                </Botao>
+                                {/* </Link> */}
+                            </div>
+                        </Col>
+                    </Row>
+                </Form>
+            )}
         </Formik>
 
     );
