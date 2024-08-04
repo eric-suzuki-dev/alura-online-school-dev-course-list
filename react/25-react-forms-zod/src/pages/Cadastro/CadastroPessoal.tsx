@@ -9,15 +9,8 @@ import {
   ErrorMessage,
 } from "../../components";
 import { useForm, Controller } from "react-hook-form";
-import {z} from 'zod'
-
-interface FormInputTipos {
-  nome: string;
-  email: string;
-  telefone: string;
-  senha: string;
-  senhaVerificada: string;
-}
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const esquemaCadastro = z.object({
   nome: z.string().min(5),
@@ -25,7 +18,9 @@ const esquemaCadastro = z.object({
   telefone: z.string(),
   senha: z.string(),
   senhaVerificada: z.string(),
-})
+});
+
+type FormInputTipos = z.infer<typeof esquemaCadastro>;
 
 const CadastroPessoal = () => {
   const {
@@ -35,6 +30,7 @@ const CadastroPessoal = () => {
     control,
   } = useForm<FormInputTipos>({
     mode: "all",
+    resolver: zodResolver(esquemaCadastro),
     defaultValues: {
       nome: "",
       email: "",
