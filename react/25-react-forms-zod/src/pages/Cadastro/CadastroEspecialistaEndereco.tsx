@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import {
   Button,
   Divisor,
@@ -15,73 +14,10 @@ import {
   UploadLabel,
   UploadTitulo,
 } from "../../components";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useCallback, useEffect } from "react";
-
-const esquemaCadastroEnderecoEspecialista = z.object({
-  endereco: z.object({
-    cep: z.string().min(8, "Informe um CEP válido"),
-    rua: z.string().min(1, "Informe uma rua válida"),
-    numero: z.coerce.number().min(1, "Informe um número válido"),
-    bairro: z.string().min(1, "Informe um bairro válido"),
-    localidade: z.string().min(1, "Informe uma localidade válido"),
-  }),
-});
-
-type FormCadastroEnderecoEspecialista = z.infer<
-  typeof esquemaCadastroEnderecoEspecialista
->;
-
-type EnderecoProps = {
-  logradouro: string;
-  bairro: string;
-  localidade: string;
-  uf: string;
-};
+import useCep from "../../hooks/useCep";
 
 const CadastroEspecialistaEndereco = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setValue,
-    watch,
-  } = useForm<FormCadastroEnderecoEspecialista>({
-    resolver: zodResolver(esquemaCadastroEnderecoEspecialista),
-    defaultValues: {
-      endereco: {
-        cep: "",
-        rua: "",
-        numero: 0,
-        bairro: "",
-        localidade: "",
-      },
-    },
-  });
-
-  const aoSubmeter = (dados: FormCadastroEnderecoEspecialista) => {
-    console.log(dados);
-  };
-
-  const handleSetDados = useCallback((dados: EnderecoProps) => {
-    setValue("endereco.bairro", dados.bairro);
-    setValue("endereco.rua", dados.logradouro);
-    setValue("endereco.localidade", dados.localidade + ", " + dados.uf);
-  }, [setValue]);
-
-  const buscaEndereco = useCallback(async (cep: string) => {
-    const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const dados = await result.json();
-    handleSetDados(dados);
-  }, [handleSetDados]);
-
-  const codigoCep = watch("endereco.cep");
-
-  useEffect(() => {
-    if (codigoCep.length !== 8) return;
-    buscaEndereco(codigoCep);
-  }, [buscaEndereco, codigoCep]);
+  const { register, handleSubmit, aoSubmeter, errors } = useCep();
 
   return (
     <>
@@ -92,8 +28,16 @@ const CadastroEspecialistaEndereco = () => {
           <UploadLabel htmlFor="campo-upload">
             <UploadIcon />
             <UploadDescription>Clique para enviar</UploadDescription>
-            <UploadInput accept="image/*" id="campo-upload" type="file" />
+            <UploadInput
+              accept="image/*"
+              id="campo-upload"
+              type="file"
+              {...register("endereco.avatar")}
+            />
           </UploadLabel>
+          {errors.endereco?.avatar && (
+            <ErrorMessage>{errors.endereco?.avatar.message}</ErrorMessage>
+          )}
         </>
 
         <Divisor />
