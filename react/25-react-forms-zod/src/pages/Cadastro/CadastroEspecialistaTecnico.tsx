@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import {
   Button,
   ButtonContainer,
@@ -26,11 +26,16 @@ const esquemaCadastroEspecialista = z.object({
 type FormEspecialista = z.infer<typeof esquemaCadastroEspecialista>;
 
 const CadastroEspecialistaTecnico = () => {
-  const { register, handleSubmit } = useForm<FormEspecialista>();
+  const { register, handleSubmit, control } = useForm<FormEspecialista>();
 
   const aoSubmeter = (dados: FormEspecialista) => {
     console.log(dados);
   };
+
+  const { fields, append } = useFieldArray({
+    control,
+    name: "especialidades",
+  });
 
   return (
     <>
@@ -46,30 +51,41 @@ const CadastroEspecialistaTecnico = () => {
           />
         </Fieldset>
         <Divisor />
-        <Fieldset>
-          <Label>Especialidade</Label>
-          <Input
-            id="campo-especialidade"
-            type="text"
-            placeholder="Qual sua especialidade?"
-          />
-        </Fieldset>
+        {fields.map((field, index) => (
+          <div key={field.id}>
+            <Fieldset>
+              <Label>Especialidade</Label>
+              <Input
+                id="campo-especialidade"
+                type="text"
+                placeholder="Qual sua especialidade?"
+                {...register(`especialidades.${index}.especialidade`)}
+              />
+            </Fieldset>
 
-        <FormContainer>
-          <Fieldset>
-            <Label>Ano de conclusão</Label>
-            <Input id="campo-ano-conclusao" type="text" placeholder="2005" />
-          </Fieldset>
-          <Fieldset>
-            <Label>Instituição de ensino</Label>
-            <Input
-              id="campo-instituicao-ensino"
-              type="text"
-              placeholder="USP"
-            />
-          </Fieldset>
-        </FormContainer>
-        <Divisor />
+            <FormContainer>
+              <Fieldset>
+                <Label>Ano de conclusão</Label>
+                <Input
+                  id="campo-ano-conclusao"
+                  type="text"
+                  placeholder="2005"
+                  {...register(`especialidades.${index}.anoConclusao`)}
+                />
+              </Fieldset>
+              <Fieldset>
+                <Label>Instituição de ensino</Label>
+                <Input
+                  id="campo-instituicao-ensino"
+                  type="text"
+                  placeholder="USP"
+                  {...register(`especialidades.${index}.instituicao`)}
+                />
+              </Fieldset>
+            </FormContainer>
+            <Divisor />
+          </div>
+        ))}
         <ButtonContainer>
           <Button type="button" $variante="secundario">
             Adicionar Especialidade
