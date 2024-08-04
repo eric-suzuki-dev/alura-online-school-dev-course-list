@@ -106,10 +106,10 @@ const CadastroEspecialistaEndereco = () => {
               type="file"
               {...register("endereco.avatar")}
             />
-            {errors.endereco?.avatar && (
-              <ErrorMessage>{errors.endereco?.avatar.message}</ErrorMessage>
-            )}
           </UploadLabel>
+          {errors.endereco?.avatar && (
+            <ErrorMessage>{errors.endereco?.avatar.message}</ErrorMessage>
+          )}
         </>
 
         <Divisor />
