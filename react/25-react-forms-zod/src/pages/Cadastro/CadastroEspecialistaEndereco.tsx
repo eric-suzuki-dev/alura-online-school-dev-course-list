@@ -17,11 +17,11 @@ import {
 } from "../../components";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 const esquemaCadastroEnderecoEspecialista = z.object({
   endereco: z.object({
-    cep: z.string().min(9, "Informe um CEP válido"),
+    cep: z.string().min(8, "Informe um CEP válido"),
     rua: z.string().min(1, "Informe uma rua válida"),
     numero: z.coerce.number().min(1, "Informe um número válido"),
     bairro: z.string().min(1, "Informe um bairro válido"),
@@ -46,6 +46,7 @@ const CadastroEspecialistaEndereco = () => {
     handleSubmit,
     formState: { errors },
     setValue,
+    watch,
   } = useForm<FormCadastroEnderecoEspecialista>({
     resolver: zodResolver(esquemaCadastroEnderecoEspecialista),
     defaultValues: {
@@ -67,13 +68,20 @@ const CadastroEspecialistaEndereco = () => {
     setValue("endereco.bairro", dados.bairro);
     setValue("endereco.rua", dados.logradouro);
     setValue("endereco.localidade", dados.localidade + ", " + dados.uf);
-  }, []);
+  }, [setValue]);
 
   const buscaEndereco = useCallback(async (cep: string) => {
     const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const dados = await result.json();
     handleSetDados(dados);
-  }, []);
+  }, [handleSetDados]);
+
+  const codigoCep = watch("endereco.cep");
+
+  useEffect(() => {
+    if (codigoCep.length !== 8) return;
+    buscaEndereco(codigoCep);
+  }, [buscaEndereco, codigoCep]);
 
   return (
     <>
