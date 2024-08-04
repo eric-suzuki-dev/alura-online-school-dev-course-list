@@ -18,6 +18,7 @@ import {
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useEffect } from "react";
+import { supabase } from "../../libs/supabase";
 
 const esquemaCadastroEnderecoEspecialista = z.object({
   endereco: z.object({
@@ -62,7 +63,10 @@ const CadastroEspecialistaEndereco = () => {
     },
   });
 
-  const aoSubmeter = (dados: FormCadastroEnderecoEspecialista) => {
+  const aoSubmeter = async (dados: FormCadastroEnderecoEspecialista) => {
+    await supabase.storage
+      .from("react-forms")
+      .upload(dados.endereco.avatar.name, dados.endereco.avatar);
     console.log(dados);
   };
 
