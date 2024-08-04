@@ -17,6 +17,7 @@ import {
 } from "../../components";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useCallback } from "react";
 
 const esquemaCadastroEnderecoEspecialista = z.object({
   endereco: z.object({
@@ -32,11 +33,19 @@ type FormCadastroEnderecoEspecialista = z.infer<
   typeof esquemaCadastroEnderecoEspecialista
 >;
 
+type EnderecoProps = {
+  logradouro: string;
+  bairro: string;
+  localidade: string;
+  uf: string;
+};
+
 const CadastroEspecialistaEndereco = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm<FormCadastroEnderecoEspecialista>({
     resolver: zodResolver(esquemaCadastroEnderecoEspecialista),
     defaultValues: {
@@ -53,6 +62,18 @@ const CadastroEspecialistaEndereco = () => {
   const aoSubmeter = (dados: FormCadastroEnderecoEspecialista) => {
     console.log(dados);
   };
+
+  const handleSetDados = useCallback((dados: EnderecoProps) => {
+    setValue("endereco.bairro", dados.bairro);
+    setValue("endereco.rua", dados.logradouro);
+    setValue("endereco.localidade", dados.localidade + ", " + dados.uf);
+  }, []);
+
+  const buscaEndereco = useCallback(async (cep: string) => {
+    const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const dados = await result.json();
+    handleSetDados(dados);
+  }, []);
 
   return (
     <>
