@@ -13,11 +13,14 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const esquemaCadastro = z.object({
-  nome: z.string().min(5),
-  email: z.string(),
+  nome: z.string().min(5, "O nome deve ter ao menos cinco caracters"),
+  email: z
+    .string()
+    .min(1, "O campo é obrigatório")
+    .email("O email não é válido"),
   telefone: z.string(),
-  senha: z.string(),
-  senhaVerificada: z.string(),
+  senha: z.string().min(6, "A senha deve ter pelo menos 6 caracteres"),
+  senhaVerificada: z.string().min(1, "Este campo não pode ser vazio"),
 });
 
 type FormInputTipos = z.infer<typeof esquemaCadastro>;
