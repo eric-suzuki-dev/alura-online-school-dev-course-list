@@ -19,7 +19,13 @@ const esquemaCadastroEspecialista = z.object({
   especialidades: z.array(
     z.object({
       especialidade: z.string().min(1, "Preencha a sua especialidade"),
-      anoConclusao: z.number().min(1, "Preencha a seu ano de conclusão"),
+      anoConclusao: z.coerce
+        .number({
+          errorMap: () => {
+            return { message: "Insira um número" };
+          },
+        })
+        .min(1, "Preencha a seu ano de conclusão"),
       instituicao: z.string().min(1, "Preencha a sua instituição de ensino"),
     })
   ),
