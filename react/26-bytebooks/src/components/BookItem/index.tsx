@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import { Book } from '../../store/reducers/books';
 
 type BookItemProps = {
 	book: Book;
 };
 
-const BookItem: React.FC<BookItemProps> = ({ book }) => {
+const BookItemComponent: React.FC<BookItemProps> = ({ book }) => {
 	return (
 		<div className='flex flex-col items-start justify-center w-[246px] m-4'>
 			<img src={book.image} alt={book.title} />
@@ -16,4 +17,5 @@ const BookItem: React.FC<BookItemProps> = ({ book }) => {
 	);
 };
 
+const BookItem = memo(BookItemComponent);
 export default BookItem;
