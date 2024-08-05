@@ -2,15 +2,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import Header from '../../components/Header';
 import PageContent from '../../components/PageContent';
 import PageSection from '../../components/PageSection';
-import React, { useEffect } from 'react';
+import React, { Profiler, Suspense, lazy, useEffect, useMemo } from 'react';
 import { fetchBooks, filterItems } from '../../store/reducers/books';
 import { AppDispatch, RootState } from '../../store/store';
 import { Footer } from '../../components/Footer';
+import { resolvePromise } from '../../utils';
+
+const BooksList = lazy(() => resolvePromise(import('../../components/BooksList')));
 
 const Catalog: React.FC = () => {
 	const dispatch = useDispatch<AppDispatch>();
 	const [filterInput, setFilterInput] = React.useState('');
-	const { books, filteredBooks, isLoading } = useSelector((state: RootState) => state.books);
+	const { books, filteredBooks } = useSelector((state: RootState) => state.books);
+
+	const CatalogHeader = useMemo(
+		() => (
+			<Header>
+				<img alt='ByteBooks Logo' src='./logo.webp' height={70} loading='lazy' />
+			</Header>
+		),
+		[]
+	);
 
 	const showingItems = filteredBooks && filteredBooks.length > 0 ? filteredBooks : books;
 
@@ -23,13 +35,22 @@ const Catalog: React.FC = () => {
 		dispatch(filterItems(e.target.value));
 	};
 
+	function onRender(id, phase, actualDuration, baseDuration, startTime, commitTime) {
+		console.log({
+			id,
+			phase,
+			actualDuration,
+			baseDuration,
+			startTime,
+			commitTime,
+		});
+	}
+
 	return (
-		<React.Fragment>
-			{!isLoading && (
+		<Profiler id='catalog' onRender={onRender}>
+			<React.Fragment>
 				<React.Fragment>
-					<Header>
-						<img alt='ByteBooks Logo' src='./logo.png' height={70} />
-					</Header>
+					{CatalogHeader}
 					<PageSection>
 						<h2 className='text-4xl text-white font-bold'>Já sabe por onde começar?</h2>
 						<h3 className='text-base text-white font-bold mt-4'>
@@ -51,33 +72,26 @@ const Catalog: React.FC = () => {
 									Oops! Não encontramos nenhum resultado.
 								</h2>
 								<img
-									src='/not_found.png'
+									src='/not_found.webp'
 									alt='sem resultado'
 									className='w-1/2 max-w-[500px] mx-auto mt-4'
+									loading='lazy'
 								/>
 							</div>
 						) : (
 							<PageContent>
 								<div className='flex flex-wrap justify-center container items-start'>
-									{showingItems.map((book) => (
-										<div className='flex flex-col items-start justify-center w-[246px] m-4'>
-											<img src={book.image} alt={book.title} />
-											<div className='flex flex-col'>
-												<h3 className='text-lg text-[#002F52] font-bold text-left my-2'>
-													{book.title}
-												</h3>
-												<p className='text-sm text-[#221F20]'>Por: {book.author}</p>
-											</div>
-										</div>
-									))}
+									<Suspense fallback={<img alt='loading' src='/loading.gif' loading='lazy' />}>
+										<BooksList items={showingItems} />
+									</Suspense>
 								</div>
 							</PageContent>
 						)}
 						<Footer />
 					</React.Fragment>
 				</React.Fragment>
-			)}
-		</React.Fragment>
+			</React.Fragment>
+		</Profiler>
 	);
 };
 
