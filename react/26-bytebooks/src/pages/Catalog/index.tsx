@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Header from '../../components/Header';
 import PageContent from '../../components/PageContent';
 import PageSection from '../../components/PageSection';
-import React, { Profiler, useEffect } from 'react';
+import React, { Profiler, Suspense, useEffect } from 'react';
 import { fetchBooks, filterItems } from '../../store/reducers/books';
 import { AppDispatch, RootState } from '../../store/store';
 import { Footer } from '../../components/Footer';
@@ -69,8 +69,8 @@ const Catalog: React.FC = () => {
 							</div>
 						) : (
 							<PageContent>
-								{!isLoading ? (
-									<div className='flex flex-wrap justify-center container items-start'>
+								<div className='flex flex-wrap justify-center container items-start'>
+									<Suspense fallback={<img alt='loading' src='/loading.gif' />}>
 										{showingItems.map((book) => (
 											<div className='flex flex-col items-start justify-center w-[246px] m-4'>
 												<img src={book.image} alt={book.title} />
@@ -82,10 +82,8 @@ const Catalog: React.FC = () => {
 												</div>
 											</div>
 										))}
-									</div>
-								) : (
-									<img alt='loading' src='/loading.gif' />
-								)}
+									</Suspense>
+								</div>
 							</PageContent>
 						)}
 						<Footer />
