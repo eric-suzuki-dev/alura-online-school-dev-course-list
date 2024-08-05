@@ -23,8 +23,19 @@ const Catalog: React.FC = () => {
 		dispatch(filterItems(e.target.value));
 	};
 
+	function onRender(id, phase, actualDuration, baseDuration, startTime, commitTime) {
+		console.log({
+			id,
+			phase,
+			actualDuration,
+			baseDuration,
+			startTime,
+			commitTime,
+		});
+	}
+
 	return (
-		<Profiler id='catalog' onRender={(id) => console.log(id)}>
+		<Profiler id='catalog' onRender={onRender}>
 			<React.Fragment>
 				{!isLoading && (
 					<React.Fragment>
