@@ -37,39 +37,39 @@ const Catalog: React.FC = () => {
 	return (
 		<Profiler id='catalog' onRender={onRender}>
 			<React.Fragment>
-				{!isLoading && (
+				<React.Fragment>
+					<Header>
+						<img alt='ByteBooks Logo' src='./logo.png' height={70} />
+					</Header>
+					<PageSection>
+						<h2 className='text-4xl text-white font-bold'>Já sabe por onde começar?</h2>
+						<h3 className='text-base text-white font-bold mt-4'>
+							Encontre em nossa estante o que precisa para seu desenvolvimento!
+						</h3>
+						<div className='relative mt-4 rounded-md text-center p-4 w-[350px] md:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2'>
+							<input
+								placeholder='Qual será sua próxima leitura?'
+								className='rounded-3xl text-base border-white hover:border-[#B87900] focus-visible:border-[#B87900] border text-center p-4 w-full focus:placeholder-transparent focus:text-left text-white bg-transparent placeholder-white'
+								onChange={handleSearch}
+								value={filterInput}
+							/>
+						</div>
+					</PageSection>
 					<React.Fragment>
-						<Header>
-							<img alt='ByteBooks Logo' src='./logo.png' height={70} />
-						</Header>
-						<PageSection>
-							<h2 className='text-4xl text-white font-bold'>Já sabe por onde começar?</h2>
-							<h3 className='text-base text-white font-bold mt-4'>
-								Encontre em nossa estante o que precisa para seu desenvolvimento!
-							</h3>
-							<div className='relative mt-4 rounded-md text-center p-4 w-[350px] md:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2'>
-								<input
-									placeholder='Qual será sua próxima leitura?'
-									className='rounded-3xl text-base border-white hover:border-[#B87900] focus-visible:border-[#B87900] border text-center p-4 w-full focus:placeholder-transparent focus:text-left text-white bg-transparent placeholder-white'
-									onChange={handleSearch}
-									value={filterInput}
+						{!filteredBooks?.length && filterInput.length > 0 ? (
+							<div className='flex-1 items-center mt-4'>
+								<h2 className='text-center text-[#002F52] text-[32px]'>
+									Oops! Não encontramos nenhum resultado.
+								</h2>
+								<img
+									src='/not_found.png'
+									alt='sem resultado'
+									className='w-1/2 max-w-[500px] mx-auto mt-4'
 								/>
 							</div>
-						</PageSection>
-						<React.Fragment>
-							{!filteredBooks?.length && filterInput.length > 0 ? (
-								<div className='flex-1 items-center mt-4'>
-									<h2 className='text-center text-[#002F52] text-[32px]'>
-										Oops! Não encontramos nenhum resultado.
-									</h2>
-									<img
-										src='/not_found.png'
-										alt='sem resultado'
-										className='w-1/2 max-w-[500px] mx-auto mt-4'
-									/>
-								</div>
-							) : (
-								<PageContent>
+						) : (
+							<PageContent>
+								{!isLoading ? (
 									<div className='flex flex-wrap justify-center container items-start'>
 										{showingItems.map((book) => (
 											<div className='flex flex-col items-start justify-center w-[246px] m-4'>
@@ -83,12 +83,14 @@ const Catalog: React.FC = () => {
 											</div>
 										))}
 									</div>
-								</PageContent>
-							)}
-							<Footer />
-						</React.Fragment>
+								) : (
+									<img alt='loading' src='/loading.gif' />
+								)}
+							</PageContent>
+						)}
+						<Footer />
 					</React.Fragment>
-				)}
+				</React.Fragment>
 			</React.Fragment>
 		</Profiler>
 	);
