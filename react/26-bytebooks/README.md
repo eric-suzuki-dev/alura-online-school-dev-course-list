@@ -1,58 +1,50 @@
+![thumb-react-google-lighthouse](./alura-react-google-lighthouse.png)
+
 # ByteBooks
 
-## Descrição do Projeto
+App de uma editora de livros fictícia.
 
-ByteBooks é um projeto desenvolvido com React, TypeScript, Tailwind, Vite, React Router DOM e Redux Toolkit RTK para o curso de React - Performance e Observabilidade da Alura. O objetivo do projeto é fornecer uma plataforma de livros digitais, onde os usuários podem navegar, comprar e ler livros online.
+## 🔨 Funcionalidades do projeto
 
-## Tecnologias Utilizadas
+O ByteBooks apresenta um catálogo de livros de tecnologia, com função de busca e responsividade para dispositivos móveis.
 
-- [React](https://pt-br.reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-- [Redux Toolkit RTK](https://redux-toolkit.js.org/)
+![bytebooks-final-project](./bytebooks-final-project.gif)
 
-## Como Executar o Projeto
+## ✔️ Técnicas e tecnologias utilizadas
 
-1. Clone o repositório para a sua máquina local usando `git clone https://github.com/SEU_USUARIO/bytebooks.git`
-2. Navegue até a pasta do projeto e execute `npm install` para instalar as dependências
-3. Execute `npm run dev` para iniciar o servidor de desenvolvimento
-4. Abra o navegador e acesse `http://localhost:5173`
+Para a implementação do projeto foram utilizadas as seguintes técnicas e tecnologias:
 
-## Contribuição
+- React
+- TypeScript
+- Tailwind
+- Identificação de problemas de perfomance
+  - Extensão Google Lighthouse
+  - React.Profiler
+  - Aba Profiler do React Dev Tools
+- Memoização de componentes
+  - React.lazy
+  - useMemo
+- Otimização de renderização
+  - React.lazy
+  - React.Suspense
+  - Propriedade key
+- Otimização de imagens e css
+  - Formatos de imagem modernos (.webp, .avif)
+  - Propriedade loading da tag <img>
+  - Propriedade font-swap
 
-Este projeto é para fins de estudo, então me envie um e-mail me contando o que você está fazendo e por que está fazendo, me ensine o que você sabe. Todos os tipos de contribuições são muito bem-vindos e apreciados!
+## 📁 Acesso ao projeto
 
-## Licença
+Você pode acessar o [código fonte do projeto](https://github.com/alura-cursos/bytebooks/tree/main) ou [baixá-lo](https://github.com/alura-cursos/bytebooks/archive/refs/heads/main.zip).
 
-[MIT](https://choosealicense.com/licenses/mit/)
-a# ByteBooks
+## 🛠️ Abrir e rodar o projeto
 
-## Descrição do Projeto
+Após baixar o projeto, abra o terminal na pasta do projeto e execute o comando `npm i` ou `npm install`.
 
-ByteBooks é um projeto desenvolvido com React, TypeScript, Tailwind, Vite, React Router DOM e Redux Toolkit RTK para o curso de React - Performance e Observabilidade da Alura. O objetivo do projeto é fornecer uma plataforma de livros digitais, onde os usuários podem navegar, comprar e ler livros online.
+Inicie o servidor de desenvolvimento com `npm run dev`.
 
-## Tecnologias Utilizadas
+Agora vá até seu navegador e acesse http://localhost:5173/ ou o link que o terminal do Vite indicar 🏆
 
-- [React](https://pt-br.reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-- [Redux Toolkit RTK](https://redux-toolkit.js.org/)
+## 📚 Mais informações do curso
 
-## Como Executar o Projeto
-
-1. Clone o repositório para a sua máquina local usando `git clone https://github.com/SEU_USUARIO/bytebooks.git`
-2. Navegue até a pasta do projeto e execute `npm install` para instalar as dependências
-3. Execute `npm run dev` para iniciar o servidor de desenvolvimento
-4. Abra o navegador e acesse `http://localhost:5173`
-
-## Personalize seu projeto!
-
-Este projeto é para fins de estudo, estamos utilizando a temática de livros como exemplo. Que tal deixar esse projeto a sua cara? Personalize o projeto e compartilha com a gente ;)
-
-## Licença
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Gostou do projeto e quer aprender como implementá-lo? Você pode [acessar o curso de React: identificando problemas de perfomance com o Google Lighthouse](https://www.alura.com.br/TBD).
