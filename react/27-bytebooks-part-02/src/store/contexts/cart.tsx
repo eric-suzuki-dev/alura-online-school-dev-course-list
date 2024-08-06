@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useMemo, useReducer } from 'react';
 
 export type Book = {
 	id: number;
@@ -19,6 +19,7 @@ export type CartBook = Book & { quantity: number; price: number };
 export interface CartState {
 	books: CartBook[];
 	isCartOpen: boolean;
+	cartTotal: string;
 }
 
 interface CartContextProps {
@@ -33,7 +34,6 @@ const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cartReducer = (state: CartState, action: { type: string; payload?: any }): CartState => {
-	console.log('STATE:', state.books);
 	switch (action.type) {
 		case 'SET_IS_CART_OPEN':
 			return { ...state, isCartOpen: action.payload };
@@ -58,7 +58,12 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 	const [state, dispatch] = useReducer(cartReducer, {
 		books: [],
 		isCartOpen: false,
+		cartTotal: '',
 	});
+
+	state.cartTotal = useMemo(() => {
+		return state.books.reduce((sum, book) => sum + book.price * book.quantity, 0).toFixed(2);
+	}, [state.books]);
 
 	const actions = {
 		setIsCartOpen: (isOpen: boolean) => dispatch({ type: 'SET_IS_CART_OPEN', payload: isOpen }),
