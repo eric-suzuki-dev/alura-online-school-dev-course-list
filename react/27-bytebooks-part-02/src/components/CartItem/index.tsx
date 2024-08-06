@@ -1,12 +1,15 @@
 import { memo } from 'react';
-import { CartBook } from '../../store/reducers/cart';
 import { MdAddCircle, MdDelete, MdOutlineRemoveCircle } from 'react-icons/md';
+import { CartBook, useCart } from '../../store/contexts/cart';
 
 type CartItemProps = {
 	book: CartBook;
 };
 
 const CartItemComponent: React.FC<CartItemProps> = ({ book }) => {
+	const {
+		actions: { changeQuantity, removeBook },
+	} = useCart();
 	return (
 		<div className='flex items-start mt-2 pb-4 border-b border-[#002F52]'>
 			<img src={book.image} className='w-28 shadow-lg' />
@@ -20,16 +23,16 @@ const CartItemComponent: React.FC<CartItemProps> = ({ book }) => {
 					<div className='flex-row items-center '>
 						<p className='text-base text-center'>Quantidade</p>
 						<div className='flex items-center'>
-							<button onClick={() => console.log('diminuindo quantidade do item')}>
+							<button onClick={() => changeQuantity(book, book.quantity - 1)}>
 								<MdOutlineRemoveCircle className='text-[#002F52] h-8 w-8' />
 							</button>
 							<p className='mx-4'>{book.quantity}</p>
-							<button onClick={() => console.log('diminuindo quantidade do item')}>
+							<button onClick={() => changeQuantity(book, book.quantity + 1)}>
 								<MdAddCircle className='text-[#002F52] h-8 w-8' />
 							</button>
 						</div>
 					</div>
-					<button onClick={() => console.log('removendo item')}>
+					<button onClick={() => removeBook(book)}>
 						<MdDelete className='w-6 h-6 text-[#002F52] mt-2 md:mt-0 hover:opacity-80 cursor-pointer' />
 					</button>
 				</div>

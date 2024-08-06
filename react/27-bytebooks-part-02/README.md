@@ -1,4 +1,4 @@
-![thumb-react-google-lighthouse](./alura-react-google-lighthouse.png)
+![thumb-react-vite-ssr](./alura-react-vite-ssr.png)
 
 # ByteBooks
 
@@ -6,7 +6,7 @@ App de uma editora de livros fictícia.
 
 ## 🔨 Funcionalidades do projeto
 
-O ByteBooks apresenta um catálogo de livros de tecnologia, com função de busca e responsividade para dispositivos móveis.
+O ByteBooks apresenta um catálogo de livros de tecnologia, com função de busca, detalhes do livro, carrinho e responsividade para dispositivos móveis.
 
 ![bytebooks-final-project](./bytebooks-final-project.gif)
 
@@ -15,6 +15,8 @@ O ByteBooks apresenta um catálogo de livros de tecnologia, com função de busc
 Para a implementação do projeto foram utilizadas as seguintes técnicas e tecnologias:
 
 - React
+  - Vite
+  - SSR
 - TypeScript
 - Tailwind
 - Identificação de problemas de perfomance
@@ -35,7 +37,7 @@ Para a implementação do projeto foram utilizadas as seguintes técnicas e tecn
 
 ## 📁 Acesso ao projeto
 
-Você pode acessar o [código fonte do projeto](https://github.com/alura-cursos/bytebooks/tree/main) ou [baixá-lo](https://github.com/alura-cursos/bytebooks/archive/refs/heads/main.zip).
+Você pode acessar o [código fonte do projeto](https://github.com/alura-cursos/bytebooks/tree/curso-2/projeto-inicial) ou [baixá-lo](https://github.com/alura-cursos/bytebooks/archive/refs/heads/curso-2/projeto-inicial.zip).
 
 ## 🛠️ Abrir e rodar o projeto
 
@@ -47,4 +49,4 @@ Agora vá até seu navegador e acesse http://localhost:5173/ ou o link que o ter
 
 ## 📚 Mais informações do curso
 
-Gostou do projeto e quer aprender como implementá-lo? Você pode [acessar o curso de React: identificando problemas de perfomance com o Google Lighthouse](https://www.alura.com.br/TBD).
+Gostou do projeto e quer aprender como implementá-lo? Você pode [acessar o curso de React Vite e SSR: Utilizando SSR para otimizar a performance da aplicação](https://cursos.alura.com.br/course/react-observabilidade-1).
