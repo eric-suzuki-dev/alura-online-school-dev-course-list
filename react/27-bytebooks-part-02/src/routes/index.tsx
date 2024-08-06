@@ -4,6 +4,7 @@ import BookDetail from '../pages/BookDetail';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { AppContext } from '../store/app';
+import Order from '../pages/Order';
 
 export const Routes = () => (
 	<AppContext>
@@ -11,6 +12,7 @@ export const Routes = () => (
 		<Switch>
 			<Route exact path='/' component={Catalog} />
 			<Route path='/book' component={BookDetail} />
+			<Route path='/order' component={Order} />
 		</Switch>
 		<Footer />
 	</AppContext>
