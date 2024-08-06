@@ -1,14 +1,15 @@
-import { useSelector } from 'react-redux';
 import PageSection from '../../components/PageSection';
-import { RootState } from '../../store/store';
 import { MdAddCircle, MdOutlineRemoveCircle } from 'react-icons/md';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import Breadcrumb from '../../components/Breadcrumb';
+import { useBooks } from '../../store/contexts/books';
 
 const BookDetail = () => {
 	const navigate = useHistory();
-	const { selectedBook } = useSelector((state: RootState) => state.books);
+	const {
+		state: { selectedBook },
+	} = useBooks();
 	const [quantity, setQuantity] = useState(1);
 	const quantityWithZero = quantity < 10 ? `0${quantity}` : quantity;
 

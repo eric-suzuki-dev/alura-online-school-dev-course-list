@@ -1,20 +1,20 @@
 import { memo } from 'react';
-import { Book, setSelectedBook } from '../../store/reducers/books';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../store/store';
 import { useHistory } from 'react-router-dom';
+import { Book, useBooks } from '../../store/contexts/books';
 
 type BookItemProps = { book: Book };
 
 const BookItemComponent: React.FC<BookItemProps> = ({ book }) => {
 	const navigation = useHistory();
-	const dispatch = useDispatch<AppDispatch>();
+	const {
+		actions: { setSelectedBook },
+	} = useBooks();
 
 	return (
 		<div
 			className='flex flex-col items-start justify-center w-[246px] m-4 cursor-pointer'
 			onClick={() => {
-				dispatch(setSelectedBook(book));
+				setSelectedBook(book);
 				navigation.push(`/book/${book.id}`);
 			}}
 		>
