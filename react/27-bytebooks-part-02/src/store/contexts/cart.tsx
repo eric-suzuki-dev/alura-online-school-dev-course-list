@@ -29,6 +29,7 @@ interface CartContextProps {
 		addToCart: (book: CartBook) => void;
 		removeBook: (book: CartBook) => void;
 		changeQuantity: (book: CartBook, quantity: number) => void;
+		resetCart: () => void;
 	};
 }
 
@@ -62,6 +63,8 @@ const cartReducer = (state: CartState, action: { type: string; payload?: any }):
 				return book;
 			});
 			return { ...state, books: newBooks };
+		case 'RESET_CART':
+			return { ...state, books: [] };
 		default:
 			return state;
 	}
@@ -84,6 +87,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 		removeBook: (book: CartBook) => dispatch({ type: 'REMOVE_BOOK', payload: book }),
 		changeQuantity: (book: CartBook, quantity: number) =>
 			dispatch({ type: 'CHANGE_QUANTITY', payload: { ...book, quantity } }),
+		resetCart: () => dispatch({ type: 'RESET_CART' }),
 	};
 
 	return <CartContext.Provider value={{ state, actions }}>{children}</CartContext.Provider>;

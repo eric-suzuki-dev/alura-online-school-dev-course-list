@@ -11,6 +11,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
 	const navigation = useHistory();
 	const {
 		state: { books, cartTotal },
+		actions: { setIsCartOpen },
 	} = useCart();
 	return (
 		<div className='relative z-10'>
@@ -45,7 +46,10 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
 											<div className='mt-8'>
 												<button
 													className='py-3 w-full bg-[#EB9B00] hover:opacity-80 rounded-md shadow-md'
-													onClick={() => navigation.push('/order')}
+													onClick={() => {
+														setIsCartOpen(false);
+														navigation.push('/order');
+													}}
 												>
 													<h3 className='text-white text-lg font-medium'>Finalizar Compra</h3>
 												</button>
