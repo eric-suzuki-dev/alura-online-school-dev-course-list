@@ -27,6 +27,8 @@ interface CartContextProps {
 	actions: {
 		setIsCartOpen: (isOpen: boolean) => void;
 		addToCart: (book: CartBook) => void;
+		removeBook: (book: CartBook) => void;
+		changeQuantity: (book: CartBook, quantity: number) => void;
 	};
 }
 
@@ -49,6 +51,17 @@ const cartReducer = (state: CartState, action: { type: string; payload?: any }):
 				return { ...state, books: newBooks };
 			}
 			return { ...state, books: [...state.books, action.payload] };
+		case 'REMOVE_BOOK':
+			const newBook = state.books.filter((book) => book.id !== action.payload.id);
+			return { ...state, books: newBook };
+		case 'CHANGE_QUANTITY':
+			const newBooks = state.books.map((book) => {
+				if (book.id === action.payload.id) {
+					return { ...book, quantity: action.payload.quantity };
+				}
+				return book;
+			});
+			return { ...state, books: newBooks };
 		default:
 			return state;
 	}
@@ -68,6 +81,9 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 	const actions = {
 		setIsCartOpen: (isOpen: boolean) => dispatch({ type: 'SET_IS_CART_OPEN', payload: isOpen }),
 		addToCart: (book: CartBook) => dispatch({ type: 'ADD_TO_CART', payload: book }),
+		removeBook: (book: CartBook) => dispatch({ type: 'REMOVE_BOOK', payload: book }),
+		changeQuantity: (book: CartBook, quantity: number) =>
+			dispatch({ type: 'CHANGE_QUANTITY', payload: { ...book, quantity } }),
 	};
 
 	return <CartContext.Provider value={{ state, actions }}>{children}</CartContext.Provider>;
