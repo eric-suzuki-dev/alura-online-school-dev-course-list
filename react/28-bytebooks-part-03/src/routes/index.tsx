@@ -7,13 +7,14 @@ import { AppContext } from '../store/app';
 import Order from '../pages/Order';
 
 export const Routes = () => (
-	<AppContext>
-		<Header />
-		<Switch>
-			<Route exact path='/' component={Catalog} />
-			<Route path='/book' component={BookDetail} />
-			<Route path='/order' component={Order} />
-		</Switch>
-		<Footer />
-	</AppContext>
+  <AppContext>
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Catalog} />
+      <Route path="/book" component={BookDetail} />
+      <Route path="/order" component={Order} />
+      <Route path="*" component={() => <h1>Não ha nada aqui.</h1>} />
+    </Switch>
+    <Footer />
+  </AppContext>
 );
