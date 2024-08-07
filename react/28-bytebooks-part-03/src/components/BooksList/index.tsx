@@ -1,4 +1,4 @@
-import { Book } from '../../store/reducers/books';
+import { Book } from '../../store/contexts/books';
 import BookItem from '../BookItem';
 
 const BooksList = ({ items }: { items: Book[] }) => (
