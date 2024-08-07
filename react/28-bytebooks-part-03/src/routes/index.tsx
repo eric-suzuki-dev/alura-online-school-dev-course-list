@@ -5,16 +5,17 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { AppContext } from '../store/app';
 import Order from '../pages/Order';
+import NotFound from '../pages/NotFound';
 
 export const Routes = () => (
-  <AppContext>
-    <Header />
-    <Switch>
-      <Route exact path="/" component={Catalog} />
-      <Route path="/book" component={BookDetail} />
-      <Route path="/order" component={Order} />
-      <Route path="*" component={() => <h1>Não ha nada aqui.</h1>} />
-    </Switch>
-    <Footer />
-  </AppContext>
+	<AppContext>
+		<Header />
+		<Switch>
+			<Route exact path='/' component={Catalog} />
+			<Route path='/book' component={BookDetail} />
+			<Route path='/order' component={Order} />
+			<Route path='*' component={NotFound} />
+		</Switch>
+		<Footer />
+	</AppContext>
 );
