@@ -50,6 +50,7 @@ export default function Home() {
 					</div>
 					<input
 						ref={inputRef}
+						id='search-input'
 						type='text'
 						className='p-2 pl-8 mt-3 border-2 border-light-blue rounded-[10px] sm:w-1/2 md:w-1/2 lg:w-1/3'
 						onChange={(e) => setSearch(e.target.value)}
