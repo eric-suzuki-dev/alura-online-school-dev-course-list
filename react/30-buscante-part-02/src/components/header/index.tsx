@@ -12,7 +12,7 @@ export default function Header() {
 				</Link>
 				<nav className='flex items-center'>
 					<div>
-						<Link href='/minha-estante'>
+						<Link href='/my-shelf'>
 							<p className='text-white hover:opacity-50 mx-2 cursor-pointer text-lg font-normal'>
 								Minha estante
 							</p>

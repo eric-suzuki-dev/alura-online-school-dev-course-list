@@ -22,6 +22,8 @@ interface BooksContextData {
 	loading: boolean;
 	selectedBook?: Book;
 	setSelectedBook: (book: Book) => void;
+	myShelf: Book[];
+	addToShelf: (book: Book) => void;
 }
 
 interface BooksProviderProps {
@@ -32,6 +34,7 @@ export const BooksContext = createContext<BooksContextData | undefined>(undefine
 
 export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 	const [results, setResults] = useState<Book[]>([]);
+	const [myShelf, setMyShelf] = useState<Book[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [selectedBook, setSelectedBook] = useState<Book | undefined>(undefined);
 
@@ -49,8 +52,14 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 		}
 	};
 
+	const addToShelf = (book: Book) => {
+		setMyShelf((previous) => [...previous, book]);
+	};
+
 	return (
-		<BooksContext.Provider value={{ results, searchBooks, loading, selectedBook, setSelectedBook }}>
+		<BooksContext.Provider
+			value={{ results, searchBooks, loading, selectedBook, setSelectedBook, myShelf, addToShelf }}
+		>
 			{children}
 		</BooksContext.Provider>
 	);
