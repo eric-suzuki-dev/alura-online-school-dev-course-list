@@ -78,7 +78,7 @@ export default function Home() {
 					</div>
 				)}
 			</div>
-			{!loading && results.length && <BooksList books={results} />}
+			{!loading && !!results.length && <BooksList books={results} />}
 		</main>
 	);
 }
