@@ -1,4 +1,5 @@
 'use client';
+import { NotificationProps } from '@/components/notification';
 import { createContext, useState, FunctionComponent, ReactNode } from 'react';
 
 export interface Book {
@@ -24,6 +25,7 @@ interface BooksContextData {
 	setSelectedBook: (book: Book) => void;
 	myShelf: Book[];
 	addToShelf: (book: Book) => void;
+	notification: NotificationProps;
 }
 
 interface BooksProviderProps {
@@ -37,6 +39,11 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 	const [myShelf, setMyShelf] = useState<Book[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [selectedBook, setSelectedBook] = useState<Book | undefined>(undefined);
+	const [notification, setNotification] = useState<NotificationProps>({
+		title: '',
+		message: '',
+		showNotification: false,
+	});
 
 	const searchBooks = async (query: string) => {
 		setLoading(true);
@@ -58,7 +65,16 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 
 	return (
 		<BooksContext.Provider
-			value={{ results, searchBooks, loading, selectedBook, setSelectedBook, myShelf, addToShelf }}
+			value={{
+				results,
+				searchBooks,
+				loading,
+				selectedBook,
+				setSelectedBook,
+				myShelf,
+				addToShelf,
+				notification,
+			}}
 		>
 			{children}
 		</BooksContext.Provider>
