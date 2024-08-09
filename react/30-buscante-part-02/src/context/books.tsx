@@ -26,6 +26,7 @@ interface BooksContextData {
 	myShelf: Book[];
 	addToShelf: (book: Book) => void;
 	notification: NotificationProps;
+	removeFromShelf: (book: Book) => void;
 }
 
 interface BooksProviderProps {
@@ -84,6 +85,18 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 		return;
 	};
 
+	const removeFromShelf = (book: Book) => {
+		setMyShelf((previousBooks) => previousBooks.filter((item) => item.id !== book.id));
+		setNotification({
+			title: 'Sucesso!',
+			message: 'O livro foi removido com sucesso da sua estante.',
+			showNotification: true,
+		});
+		setTimeout(() => {
+			setNotification({ title: '', message: '', showNotification: false });
+		}, 2500);
+	};
+
 	return (
 		<BooksContext.Provider
 			value={{
@@ -95,6 +108,7 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 				myShelf,
 				addToShelf,
 				notification,
+				removeFromShelf,
 			}}
 		>
 			{children}
