@@ -60,7 +60,28 @@ export const BooksProvider: React.FC<BooksProviderProps> = ({ children }) => {
 	};
 
 	const addToShelf = (book: Book) => {
-		setMyShelf((previous) => [...previous, book]);
+		const isDuplicate = myShelf.some((item) => item.id === book.id);
+		if (isDuplicate) {
+			setNotification({
+				title: 'Oops! Ocorreu um erro',
+				message: 'Este livro já está na sua estante. Adicione outro livro.',
+				showNotification: true,
+			});
+			setTimeout(() => {
+				setNotification({ title: '', message: '', showNotification: false });
+			}, 2500);
+			return;
+		}
+		setMyShelf((previousBooks) => [...previousBooks, book]);
+		setNotification({
+			title: 'Sucesso!',
+			message: 'Livro adicionado com sucesso na sua estante.',
+			showNotification: true,
+		});
+		setTimeout(() => {
+			setNotification({ title: '', message: '', showNotification: false });
+		}, 2500);
+		return;
 	};
 
 	return (

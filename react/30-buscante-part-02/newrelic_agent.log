@@ -684,3 +684,59 @@
 {"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":55046,"time":"2024-03-05T17:28:38.819Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
 {"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":55046,"time":"2024-03-05T17:28:38.819Z","msg":"New Relic for Node.js in worker_threads is not officially supported. Not starting! To bypass this, set `config.worker_threads.enabled` to true in configuration."}
 {"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":55046,"time":"2024-03-05T17:29:28.209Z","msg":"Transaction WebTransaction/WebFrameworkUri/Nextjs/GET// (42d12779bb99ace2) contained 3117 segments, only collecting the first 900","component":"Transaction Trace Aggregator"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.672Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.687Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.819Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.862Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.878Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67421,"time":"2024-03-05T17:37:31.878Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.477Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.481Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.663Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.729Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.749Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":67425,"time":"2024-03-05T17:37:32.750Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":55046,"time":"2024-03-05T17:38:28.235Z","msg":"Transaction WebTransaction/WebFrameworkUri/Nextjs/GET//book-details/[slug] (b5910f32f7edf03a) contained 2184 segments, only collecting the first 900","component":"Transaction Trace Aggregator"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:20.668Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:20.696Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:21.266Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:21.419Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:21.468Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":71964,"time":"2024-03-05T17:41:21.468Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.369Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.405Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.716Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.899Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.942Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":74748,"time":"2024-03-05T17:43:37.944Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.077Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.090Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.242Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.283Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.293Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77485,"time":"2024-03-05T17:45:51.293Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.373Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.382Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.494Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.526Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.535Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":77878,"time":"2024-03-05T17:46:08.535Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.022Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.045Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.496Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.540Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.554Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79512,"time":"2024-03-05T17:47:28.554Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.453Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.455Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.594Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.632Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.641Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":79669,"time":"2024-03-05T17:47:36.641Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.002Z","msg":"Using New Relic for Node.js. Agent version: 11.10.4; Node version: v21.5.0."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.006Z","msg":"New Relic for Node.js 11.10.4 has not been tested on Node.js v21.5.0. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.105Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.133Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.141Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":80481,"time":"2024-03-05T17:48:15.141Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":40,"name":"newrelic","hostname":"Pedros-MacBook-Air.local","pid":55046,"time":"2024-03-05T17:48:28.286Z","msg":"Transaction WebTransaction/WebFrameworkUri/Nextjs/GET//my-shelf (ba27c00124e572ad) contained 1359 segments, only collecting the first 900","component":"Transaction Trace Aggregator"}
