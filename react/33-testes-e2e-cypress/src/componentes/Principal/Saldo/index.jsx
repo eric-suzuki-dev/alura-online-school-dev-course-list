@@ -1,17 +1,33 @@
 import React from 'react';
-import estilos from './Saldo.module.css';
-import { ReactComponent as Icone } from './icone-olho.svg';
+import estilos from './Principal.module.css';
+import { ReactComponent as Ilustracao } from './ilustracao.svg';
+import Saldo from './Saldo';
 
-export default function Saldo({ saldo }) {
+const data = Date.now();
+const hoje = new Date(data);
+const diasDaSemana = [
+  'Domingo',
+  'Segunda-feira',
+  'Terça-feira',
+  'Quarta-feira',
+  'Quinta-feira',
+  'Sexta-feira',
+  'Sábado',
+];
+
+export default function Principal({ saldo }) {
   return (
-    <div className={estilos.container}>
+    <section className={estilos.container}>
+      <div className={estilos.detalhe__superior} />
+      <h1 className={estilos.titulo}>Bem vindo de volta!</h1>
+      <p data-testid="data-atual" className={estilos.data}>{`${
+        diasDaSemana[hoje.getDay()]
+      }, ${hoje.toLocaleDateString('pt-BR')}`}</p>
       <div className={estilos.wrapper}>
-        <h2 className={estilos.saldo}>Saldo</h2>
-        <Icone />
+        <Ilustracao className={estilos.ilustracao} width="250" height="160" />
+        <Saldo saldo={saldo} />
       </div>
-      <div className={estilos.divisor} />
-      <p className={estilos.conta}>Conta corrente</p>
-      <p data-testid="saldo" className={estilos.valor}>{`R$ ${saldo}`}</p>
-    </div>
+      <div className={estilos.detalhe__inferior} />
+    </section>
   );
 }

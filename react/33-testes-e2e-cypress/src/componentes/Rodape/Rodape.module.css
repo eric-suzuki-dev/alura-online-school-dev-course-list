@@ -42,7 +42,7 @@
   justify-content: space-between;
 }
 
-.logos > img {
+.logos>img {
   width: 32px;
   height: 32px;
 }
@@ -80,7 +80,7 @@
     width: 70%;
   }
 
-  .logos > img {
+  .logos>img {
     width: 24px;
     height: 24px;
   }
