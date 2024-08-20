@@ -30,4 +30,26 @@ describe('Realizando requisições para a API', () => {
         });
       });
     });
+  
+    context('Interceptando solicitações de rede', () => {
+      it('Deve fazer a interceptação do POST users/login', () => {
+        cy.intercept('POST', 'users/login').as('loginRequest');
+        cy.login('neilton@alura.com', '123456');
+        cy.wait('@loginRequest').then((interception) => {
+          interception.response = {
+            statusCode: 200,
+            body: {
+              sucess: true,
+              message: 'Login bem sucedido!',
+            },
+          };
+        });
+        cy.visit('/home');
+  
+        cy.getByData('titulo-boas-vindas').should(
+          'contain.text',
+          'Bem vindo de volta!'
+        );
+      });
+    });
   });
