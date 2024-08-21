@@ -26,10 +26,11 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 # Course List
 
 ## HTML and CSS
----
+
 ### From Scratch: HTML and CSS for Web Projects
-- [01-HTML and CSS: practicing HTML/CSS](./html-and-css/01-Dev-Plus)
-- [02-HTML and CSS: Responsiveness with Mobile-First](./html-and-css/02-Books)
+- [01-HTML and CSS: practicing HTML/CSS](./html-and-css/01-dev-plus)
+- [02-HTML and CSS: Responsiveness with Mobile-First](./html-and-css/02-books)
+  
 - [03-figma](./HTML%20and%20CSS/03-figma)
 - [04-play](./HTML%20and%20CSS/04-play)
 - [05-cast](./HTML%20and%20CSS/05-cast)
