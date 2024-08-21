@@ -13,61 +13,7 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 - [Next.js](#nextjs)
 - [Course List](#course-list)
 
-## HTML and CSS
-
-This section covers the basics of HTML and CSS, the foundational technologies for building web pages. You will learn how to structure your web pages with HTML and style them using CSS.
-
-### Topics Covered
-- HTML Basics
-- CSS Basics
-- Responsive Design
-- Flexbox and Grid
-- CSS Animations
-
-## JavaScript
-
-JavaScript is the programming language of the web. In this section, you will learn the fundamentals of JavaScript, as well as more advanced topics to enhance your web development skills.
-
-### Topics Covered
-- JavaScript Syntax
-- DOM Manipulation
-- ES6 Features
-- Asynchronous JavaScript
-- Fetch API and AJAX
-
-## TypeScript
-
-TypeScript is a superset of JavaScript that adds static typing. This section will teach you how to use TypeScript to write more robust and maintainable code.
-
-### Topics Covered
-- Introduction to TypeScript
-- Type Annotations
-- Interfaces and Types
-- Generics
-- Advanced TypeScript Features
-  
-## React
-
-React is a popular JavaScript library for building user interfaces. This section will guide you through the core concepts and help you build dynamic and interactive web applications.
-
-### Topics Covered
-- Introduction to React
-- JSX
-- State and Props
-- Lifecycle Methods
-- Hooks
-- React Router
-
-## Next.js
-
-Next.js is a React framework that enables server-side rendering and static site generation. This section covers the basics of Next.js and how to build optimized and performant web applications.
-
-### Topics Covered
-- Introduction to Next.js
-- Pages and Routing
-- Static Generation (SSG) and Server-Side Rendering (SSR)
-- API Routes
-- Deployment
+---
 
 ## Getting Started
 
@@ -79,9 +25,11 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 ---
 # Course List
 
-### HTML and CSS
-- [01-Dev-Plus](./HTML%20and%20CSS/01-Dev-Plus)
-- [02-Books](./HTML%20and%20CSS/02-Books)
+## HTML and CSS
+---
+### From Scratch: HTML and CSS for Web Projects
+- [01-HTML and CSS: practicing HTML/CSS](./html-and-css/01-Dev-Plus)
+- [02-HTML and CSS: Responsiveness with Mobile-First](./html-and-css/02-Books)
 - [03-figma](./HTML%20and%20CSS/03-figma)
 - [04-play](./HTML%20and%20CSS/04-play)
 - [05-cast](./HTML%20and%20CSS/05-cast)
