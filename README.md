@@ -32,13 +32,13 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [01-HTML and CSS: practicing HTML/CSS](./html-and-css/01-dev-plus)
 - [02-HTML and CSS: Responsiveness with Mobile-First](./html-and-css/02-books)
   
-- [03-figma](./HTML%20and%20CSS/03-figma)
-- [04-play](./HTML%20and%20CSS/04-play)
-- [05-cast](./HTML%20and%20CSS/05-cast)
-- [06-SASS](./HTML%20and%20CSS/06-SASS)
-- [07-spa](./HTML%20and%20CSS/07-spa)
-- [08-culturama](./HTML%20and%20CSS/08-culturama)
-- [09-calmaria-spa](./HTML%20and%20CSS/09-calmaria-spa)
+- [03-figma](./html-and-css/03-figma)
+- [04-play](./html-and-css/04-play)
+- [05-cast](./html-and-css/05-cast)
+- [06-SASS](./html-and-css/06-sass)
+- [07-spa](./html-and-css/07-spa)
+- [08-culturama](./html-and-css/08-culturama)
+- [09-calmaria-spa](./html-and-css/09-calmaria-spa)
 
 
 ### JAVASCRIPT
