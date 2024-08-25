@@ -41,23 +41,23 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [09-calmaria-spa](./html-and-css/09-calmaria-spa)
 
 
-### JAVASCRIPT
-- [01-projeto_inicial](./JAVASCRIPT/01-projeto_inicial)
-- [02-mini-Jogo](./JAVASCRIPT/02-mini-Jogo)
-- [03-alugames](./JAVASCRIPT/03-alugames)
-- [04-carrinho-compras](./JAVASCRIPT/04-carrinho-compras)
-- [05-amigo-secreto](./JAVASCRIPT/05-amigo-secreto)
-- [06-ingresso](./JAVASCRIPT/06-ingresso)
-- [07-midi](./JAVASCRIPT/07-midi)
-- [08-Fokus](./JAVASCRIPT/08-Fokus)
-- [09-Numero-secreto](./JAVASCRIPT/09-Numero-secreto)
-- [10-vidflow-main](./JAVASCRIPT/10-vidflow-main)
-- [11-books-Javascript](./JAVASCRIPT/11-books-Javascript)
-- [12-Play-API](./JAVASCRIPT/12-Play-API)
-- [13-monibank](./JAVASCRIPT/13-monibank)
-- [14-lista-de-compras](./JAVASCRIPT/14-lista-de-compras)
-- [15-POO](./JAVASCRIPT/15-POO)
-- [16-bytebank](./JAVASCRIPT/16-bytebank)
+## JAVASCRIPT
+- [01-projeto_inicial](./javascript/01-projeto_inicial)
+- [02-mini-Jogo](./javascript/02-mini-Jogo)
+- [03-alugames](./javascript/03-alugames)
+- [04-carrinho-compras](./javascript/04-carrinho-compras)
+- [05-amigo-secreto](./javascript/05-amigo-secreto)
+- [06-ingresso](./javascript/06-ingresso)
+- [07-midi](./javascript/07-midi)
+- [08-Fokus](./javascript/08-Fokus)
+- [09-Numero-secreto](./javascript/09-Numero-secreto)
+- [10-vidflow-main](./javascript/10-vidflow-main)
+- [11-books-Javascript](./javascript/11-books-Javascript)
+- [12-Play-API](./javascript/12-Play-API)
+- [13-monibank](./javascript/13-monibank)
+- [14-lista-de-compras](./javascript/14-lista-de-compras)
+- [15-POO](./javascript/15-POO)
+- [16-bytebank](./javascript/16-bytebank)
 
 
 ### TypeScript
