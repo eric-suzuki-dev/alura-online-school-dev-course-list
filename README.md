@@ -25,22 +25,22 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 # Course List
 
-## HTML and CSS
+### HTML and CSS
 
-### From Scratch: HTML and CSS for Web Projects
+***From Scratch: HTML and CSS for Web Projects***
 
 - [01-HTML and CSS: practicing HTML/CSS](./html-and-css/01-dev-plus)
 - [02-HTML and CSS: Responsiveness with Mobile-First](./html-and-css/02-books)
 - [03-HTML and CSS: Working with Responsiveness and Project Deployment](./html-and-css/03-figma)
 
-### CSS: Deepen Your Knowledge of Styles
+***CSS: Deepen Your Knowledge of Styles***
 
 - [04-CSS: Flexbox and Responsive Layouts](./html-and-css/04-play)
 - [05-CSS: Building Layouts with Grid](./html-and-css/05-cast)
-- [06-SASS](./html-and-css/06-sass)
+- [06-SASS: Syntactically Awesome CSS](./html-and-css/06-sass)
 - [07-SASS: Syntactically Awesome CSS](./html-and-css/07-spa)
 - [08-Practicing CSS: Grid and Flexbox](./html-and-css/08-culturama)
-- [09-calmaria-spa](./html-and-css/09-calmaria-spa)
+- [09-SASS and CSS: Styling a Website](./html-and-css/09-calmaria-spa)
 
 
 ## JAVASCRIPT
