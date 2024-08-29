@@ -43,7 +43,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [09-SASS and CSS: Styling a Website](./html-and-css/09-calmaria-spa)
 
 
-## JAVASCRIPT
+### JAVASCRIPT
+
 - [01-projeto_inicial](./javascript/01-projeto_inicial)
 - [02-mini-Jogo](./javascript/02-mini-Jogo)
 - [03-alugames](./javascript/03-alugames)
@@ -63,21 +64,21 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 
 ### TypeScript
-- [01-bytebank](./TYPESCRIPT/01-bytebank)
-- [02-bytebank-part-02](./TYPESCRIPT/02-bytebank-part-02)
-- [03-fokus-ts](./TYPESCRIPT/03-fokus-ts)
-- [04-studies](./TYPESCRIPT/04-studies)
-- [05-aluroni-router](./TYPESCRIPT/05-aluroni-router)
-- [06-alfood](./TYPESCRIPT/06-alfood)
-- [07-event-tracker](./TYPESCRIPT/07-event-tracker)
-- [08-sorteador-de-amigo-secreto](./TYPESCRIPT/08-sorteador-de-amigo-secreto)
-- [09-aluroni-performance](./TYPESCRIPT/09-aluroni-performance)
-- [10-typescript-01](./TYPESCRIPT/10-typescript-01)
-- [11-typescript-02](./TYPESCRIPT/11-typescript-02)
+- [01-bytebank](./typeScript/01-bytebank)
+- [02-bytebank-part-02](./typeScript/02-bytebank-part-02)
+- [03-fokus-ts](./typeScript/03-fokus-ts)
+- [04-studies](./typeScript/04-studies)
+- [05-aluroni-router](./typeScript/05-aluroni-router)
+- [06-alfood](./typeScript/06-alfood)
+- [07-event-tracker](./typeScript/07-event-tracker)
+- [08-sorteador-de-amigo-secreto](./typeScript/08-sorteador-de-amigo-secreto)
+- [09-aluroni-performance](./typeScript/09-aluroni-performance)
+- [10-typescript-01](./typeScript/10-typescript-01)
+- [11-typescript-02](./typeScript/11-typescript-02)
 
   
 ### REACT
-- [01-react-dev-javascript](https://github.com/usuario/01-react-dev-javascript)
+- [01-react-dev-javascript](./REACT/01-react-dev-javascript)
 - [02-organo](./REACT/02-organo)
 - [03-react-router-javascript](./REACT/03-react-router-javascript)
 - [04-react-styled-components](./REACT/04-react-styled-components)
