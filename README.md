@@ -45,12 +45,15 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 ### JAVASCRIPT
 
-- [01-projeto_inicial](./javascript/01-projeto_inicial)
-- [02-mini-Jogo](./javascript/02-mini-Jogo)
-- [03-alugames](./javascript/03-alugames)
-- [04-carrinho-compras](./javascript/04-carrinho-compras)
-- [05-amigo-secreto](./javascript/05-amigo-secreto)
-- [06-ingresso](./javascript/06-ingresso)
+***From Scratch: Beginner in Programming***
+
+- [01-Programming Logic: Dive into Programming with JavaScript](./javascript/01-projeto_inicial)
+- [02-Programming Logic: Explore Functions and Lists](./javascript/02-mini-Jogo)
+- [03-Programming Logic: Practicing with Challenges](./javascript/03-alugames)
+- [04-Programming Logic: Practicing with Challenges](./javascript/04-carrinho-compras)
+- [05-Programming Logic: Practicing with Challenges](./javascript/05-amigo-secreto)
+- [06-Programming Logic: Practicing with Challenges](./javascript/06-ingresso)
+  
 - [07-midi](./javascript/07-midi)
 - [08-Fokus](./javascript/08-Fokus)
 - [09-Numero-secreto](./javascript/09-Numero-secreto)
