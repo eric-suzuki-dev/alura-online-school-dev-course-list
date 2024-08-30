@@ -53,14 +53,17 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [04-Programming Logic: Practicing with Challenges](./javascript/04-carrinho-compras)
 - [05-Programming Logic: Practicing with Challenges](./javascript/05-amigo-secreto)
 - [06-Programming Logic: Practicing with Challenges](./javascript/06-ingresso)
+
+***Develop Web Applications with JavaScript***
   
-- [07-midi](./javascript/07-midi)
-- [08-Fokus](./javascript/08-Fokus)
-- [09-Numero-secreto](./javascript/09-Numero-secreto)
-- [10-vidflow-main](./javascript/10-vidflow-main)
-- [11-books-Javascript](./javascript/11-books-Javascript)
-- [12-Play-API](./javascript/12-Play-API)
-- [13-monibank](./javascript/13-monibank)
+- [07-JavaScript for Web: Create Dynamic Pages](./javascript/07-midi)
+- [08-JavaScript: Manipulating Elements in the DOM](./javascript/08-Fokus)
+- [09-JavaScript: Validations and Speech Recognition](./javascript/09-Numero-secreto)
+- [10-JavaScript: Fetching and Handling Data from an API](./javascript/10-vidflow-main)
+- [11-JavaScript: Array Methods](./javascript/11-books-Javascript)
+- [12-JavaScript: Creating Requests](./javascript/12-Play-API)
+- [13-JavaScript: Validating Forms](./javascript/13-monibank)
+  
 - [14-lista-de-compras](./javascript/14-lista-de-compras)
 - [15-POO](./javascript/15-POO)
 - [16-bytebank](./javascript/16-bytebank)
