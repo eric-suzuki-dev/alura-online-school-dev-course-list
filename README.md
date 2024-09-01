@@ -69,7 +69,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [16-bytebank](./javascript/16-bytebank)
 
 
-### TypeScript
+### TYPESCRIPT
+
 - [01-bytebank](./typeScript/01-bytebank)
 - [02-bytebank-part-02](./typeScript/02-bytebank-part-02)
 - [03-fokus-ts](./typeScript/03-fokus-ts)
@@ -84,6 +85,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
   
 ### REACT
+
 - [01-react-dev-javascript](./REACT/01-react-dev-javascript)
 - [02-organo](./REACT/02-organo)
 - [03-react-router-javascript](./REACT/03-react-router-javascript)
