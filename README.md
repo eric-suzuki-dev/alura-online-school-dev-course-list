@@ -107,15 +107,15 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 
 ### NEXT
-- [01-nextjs-course](./NEXT/01-nextjs-course)
-- [02-nextjs-course](./NEXT/02-nextjs-course)
-- [03-next-3-jwt](./NEXT/03-next-3-jwt)
-- [04-nextjs-cms](./NEXT/04-nextjs-cms)
-- [05-arquitetura](./NEXT/05-arquitetura)
-- [06-github-actions](./NEXT/06-github-actions)
-- [07-storybook-next](./NEXT/07-storybook-next)
-- [08-Next.js-FullStack-part-01](./NEXT/08-Next.js-FullStack-part-01)
-- [09-Next.js-FullStack-part-02](./NEXT/09-Next.js-FullStack-part-02)
+- [01-nextjs-course](./next/01-nextjs-course)
+- [02-nextjs-course](./next/02-nextjs-course)
+- [03-next-3-jwt](./next/03-next-3-jwt)
+- [04-nextjs-cms](./next/04-nextjs-cms)
+- [05-arquitetura](./next/05-arquitetura)
+- [06-github-actions](./next/06-github-actions)
+- [07-storybook-next](./next/07-storybook-next)
+- [08-Next.js-FullStack-part-01](./next/08-Next.js-FullStack-part-01)
+- [09-Next.js-FullStack-part-02](./next/09-Next.js-FullStack-part-02)
 
 ## Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
