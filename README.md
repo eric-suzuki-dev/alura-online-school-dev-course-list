@@ -95,11 +95,11 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [07-react-migrando-para-typescript](./react/07-react-migrando-para-typescript)
 - [08-react-componentes-jsx](./react/08-react-componentes-jsx)
 - [09-nodejs-vidflow](./react/09-nodejs-vidflow)
-- [10-codeconnect](./REACT/10-codeconnect)
+- [10-codeconnect](./react/10-codeconnect)
 - [11-react-freelando-part-01](./react/11-react-freelando-part-01)
 - [12-react-freelando-part-02](./react/12-react-freelando-part-02)
 - [13-react-freelando-part-03](./react/13-react-freelando-part-03)
-- [14-trato-tech](./REACT/14-trato-tech)
+- [14-trato-tech](./react/14-trato-tech)
 - [15-trato-tech-immer](./react/15-trato-tech-immer)
 - [16-trato-tech-thunk-part-01](./react/16-trato-tech-thunk-part-01)
 - [17-trato-tech-thunk-part-02](./react/17-trato-tech-thunk-part-02)
@@ -107,6 +107,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 
 ### NEXT
+
 - [01-nextjs-course](./next/01-nextjs-course)
 - [02-nextjs-course](./next/02-nextjs-course)
 - [03-next-3-jwt](./next/03-next-3-jwt)
