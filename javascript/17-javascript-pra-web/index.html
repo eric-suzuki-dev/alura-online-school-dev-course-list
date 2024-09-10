@@ -27,13 +27,24 @@
                 <hr />
                 <ul id="lista-de-compras">
                     <li>
-                        <div>
-                            <input type="checkbox" />
-                            <p>Ração de gato</p>
-                            <p>Segunda, 4 de maio de 2024</p>
+                        <div class="container-texto-lista">
+                            <div class="checkbox-container">
+                                <label for="checkbox-1">
+                                    <input type="checkbox" class="checkbox-input" id="checkbox" />
+                                    <div class="checkbox-customizado checked"></div>
+                                </label>
+                            </div>
+                            <div class="texto-lista">
+                                <p>Ração de gato</p>
+                                <p>Segunda, 4 de maio de 2024</p>
+                            </div>
                         </div>
-                        <img src="img/delete.svg" alt="remover" />
-                        <img src="img/edit.svg" alt="editar" />
+                        <button>
+                            <img src="img/delete.svg" alt="remover" />
+                        </button>
+                        <button>
+                            <img src="img/edit.svg" alt="editar" />
+                        </button>
                     </li>
                 </ul>
             </div>
