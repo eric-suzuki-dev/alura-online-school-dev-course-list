@@ -17,20 +17,22 @@
 body {
     background: var(--degrade-azul);
     background-repeat: no-repeat;
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 main {
+    background-color: var(--neutro);
     margin-top: 64px;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
 
     width: 440px;
-    background-color: var(--neutro);
     padding: 56px;
 
     align-items: center;
@@ -41,7 +43,8 @@ h2 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
     font-size: 20px;
-    line-height: 33px;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 hr {
@@ -52,70 +55,62 @@ hr {
 
 p {
     font-family: var(--fonte-texto);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
 }
 
-#item-input {
+.input-item {
     display: block;
     padding: 12px 16px;
     border-radius: 24px;
     border: 1px solid var(--preto);
     width: 307px;
+
+    font-family: var(--fonte-texto);
 }
 
-input::placeholder {
+.input-item::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 19px;
 }
 
-.container-formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-#adicionar-item {
-    text-align: center;
+.button-item {
     padding: 12px 16px;
     border-radius: 24px;
     background-color: var(--cor-primaria);
     color: var(--neutro);
     font-family: var(--fonte-texto);
     font-size: 18px;
+    font-weight: 400;
     line-height: 24px;
     border: none;
 }
 
-li {
-    display: flex;
-    gap: 12px;
-}
-
-
-
-li div p:last-child {
-    font-size: 12px;
-    line-height: 20px;
-}
-
-li button {
-    background-color: transparent;
-    border: none;
-}
-
-#lista-de-compras {
-    width: 100%;
+form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    gap: 8px;
 }
 
-.checkbox-input {
+.lista-item-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-item-container div {
+    display: flex;
+    gap: 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.input-checkbox {
     display: none;
 }
 
@@ -125,12 +120,10 @@ li button {
     background-color: var(--neutro);
     border: 1px solid var(--preto);
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
     border-radius: 4px;
 }
 
-.checkbox-customizado.checked {
+.checked {
     background-color: var(--preto);
     position: relative;
 }
@@ -146,19 +139,10 @@ li button {
     border-top: 2px solid var(--neutro);
     border-left: 2px solid var(--neutro);
 
-    transform: rotate(-140deg)
+    transform: rotate(-140deg);
 }
 
-.checkbox-container {
-    display: inline;
-    margin-right: 8px;
-}
-
-.container-lista {
-    width: 100%;
-}
-
-.container-texto-lista {
-    display: flex;
-    flex: 1;
+.texto-data {
+    font-size: 12px;
+    line-height: 20px;
 }
