@@ -68,6 +68,9 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [15-POO](./javascript/15-POO)
 - [16-bytebank](./javascript/16-bytebank)
 
+***Front-End Development: Courses to Build Web Applications with HTML, CSS, and JavaScript***
+
+- [17-JavaScript: Building Dynamic Pages](./javascript/17-javascript-pra-web)
 
 ### TYPESCRIPT
 
