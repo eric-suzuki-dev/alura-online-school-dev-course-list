@@ -146,3 +146,12 @@ ul {
     font-size: 12px;
     line-height: 20px;
 }
+
+.item-lista-button {
+    border: none;
+    background-color: transparent;
+}
+
+.container-lista {
+    width: 100%;
+}
