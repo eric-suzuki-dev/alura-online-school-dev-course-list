@@ -1,3 +1,5 @@
+import { verificarListaComprados } from "./verificarListaComprados.js";
+
 const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 export function criarItemDaLista(item) {
@@ -31,6 +33,8 @@ export function criarItemDaLista(item) {
             itemTitulo.style.textDecoration = "none";
             listaDeCompras.appendChild(itemDaLista)
         }
+
+        verificarListaComprados(listaComprados)
     })
 
     const checkboxCustomizado = document.createElement("div");
