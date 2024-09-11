@@ -63,7 +63,6 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [11-JavaScript: Array Methods](./javascript/11-books-Javascript)
 - [12-JavaScript: Creating Requests](./javascript/12-Play-API)
 - [13-JavaScript: Validating Forms](./javascript/13-monibank)
-  
 - [14-lista-de-compras](./javascript/14-lista-de-compras)
 - [15-POO](./javascript/15-POO)
 - [16-bytebank](./javascript/16-bytebank)
@@ -71,6 +70,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 ***Front-End Development: Courses to Build Web Applications with HTML, CSS, and JavaScript***
 
 - [17-JavaScript: Building Dynamic Pages](./javascript/17-javascript-pra-web)
+- [18-JavaScript: Understanding Promises and Async/Await](./javascript/18-javascript-assincrono)
 
 ### TYPESCRIPT
 
