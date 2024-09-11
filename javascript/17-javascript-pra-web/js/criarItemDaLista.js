@@ -1,5 +1,8 @@
+import { editarItem } from "./editarItem.js";
+import { excluirItem } from "./excluirItem.js";
+import { gerarDiaDaSemana } from "./gerarDiaDaSemana.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
-
+const listaDeCompras = document.getElementById("lista-de-compras");
 const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 export function criarItemDaLista(item) {
@@ -59,6 +62,10 @@ export function criarItemDaLista(item) {
     imagemRemover.src = "img/delete.svg";
     imagemRemover.alt = "Remover";
 
+    botaoRemover.addEventListener("click", function () {
+        excluirItem(itemDaLista);
+    })
+
     botaoRemover.appendChild(imagemRemover);
     containerBotoes.appendChild(botaoRemover);
 
@@ -69,6 +76,10 @@ export function criarItemDaLista(item) {
     imagemEditar.src = "img/edit.svg";
     imagemEditar.alt = "Editar";
 
+    botaoEditar.addEventListener("click", function () {
+        editarItem(itemDaLista);
+    })
+
     botaoEditar.appendChild(imagemEditar);
     containerBotoes.appendChild(botaoEditar);
 
@@ -76,7 +87,7 @@ export function criarItemDaLista(item) {
     containerItemLista.appendChild(containerBotoes);
 
     const itemData = document.createElement("p");
-    itemData.innerText = `${new Date().toLocaleDateString("pt-BR", { weekday: "long" })} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", { hour: "numeric", minute: "numeric" })}`;
+    itemData.innerText = gerarDiaDaSemana();
     itemData.classList.add("texto-data");
 
     itemDaLista.appendChild(containerItemLista);
