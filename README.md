@@ -4,6 +4,8 @@
 
 Welcome to the **Front-End Programming Lessons** repository! This repository contains a comprehensive collection of lessons and materials to help you learn and master front-end development, provided by [Alura](https://www.alura.com.br/). Each topic is organized into its own folder, containing relevant exercises, examples, and projects.
 
+<br>
+
 ## Table of Contents
 
 - [HTML and CSS](#html-and-css)
@@ -11,6 +13,8 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 - [TypeScript](#typescript)
 - [React](#react)
 - [Next.js](#next)
+
+<br>
 
 ---
 
@@ -22,6 +26,8 @@ To get started with the lessons, clone this repository to your local machine:
 git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List.git
 ```
 ---
+
+<br>
 
 # Course List
 
@@ -42,6 +48,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [08-Practicing CSS: Grid and Flexbox](./html-and-css/08-culturama)
 - [09-SASS and CSS: Styling a Website](./html-and-css/09-calmaria-spa)
 
+<br>
 
 ### JAVASCRIPT
 
@@ -73,6 +80,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [18-JavaScript: Understanding Promises and Async/Await](./javascript/18-javascript-assincrono)
 - [19-JavaScript: Implementing CRUD with HTTP Requests](./javascript/19-javascript)
 
+<br>
 
 ### TYPESCRIPT
 
@@ -88,7 +96,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [10-typescript-01](./typeScript/10-typescript-01)
 - [11-typescript-02](./typeScript/11-typescript-02)
 
-  
+<br>
+
 ### REACT
 
 - [01-react-dev-javascript](./react/01-react-dev-javascript)
@@ -110,6 +119,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [17-trato-tech-thunk-part-02](./react/17-trato-tech-thunk-part-02)
 - [18-trato-tech-thunk-saga-part-03](./react/18-trato-tech-thunk-saga-part-03)
 
+<br>
 
 ### NEXT
 
@@ -122,6 +132,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [07-storybook-next](./next/07-storybook-next)
 - [08-Next.js-FullStack-part-01](./next/08-Next.js-FullStack-part-01)
 - [09-Next.js-FullStack-part-02](./next/09-Next.js-FullStack-part-02)
+
+<br>
 
 ## Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
