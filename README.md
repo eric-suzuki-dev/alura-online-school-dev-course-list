@@ -71,6 +71,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 
 - [17-JavaScript: Building Dynamic Pages](./javascript/17-javascript-pra-web)
 - [18-JavaScript: Understanding Promises and Async/Await](./javascript/18-javascript-assincrono)
+- [19-JavaScript: Implementing CRUD with HTTP Requests](./javascript/19-javascript)
+
 
 ### TYPESCRIPT
 
