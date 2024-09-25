@@ -142,5 +142,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 ## Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
 
+<br>
+
 ## License
 This repository is licensed under the MIT License. See the LICENSE file for more details.
