@@ -69,7 +69,17 @@ const api = {
       alert("Erro ao filtrar pensamentos")
       throw error
     }
-  }  
+  },
+  
+  async atualizarFavorito(id, favorito) {
+    try {
+      const response = await axios.patch(`${URL_BASE}/pensamentos/${id}`, { favorito })
+      return response.data
+    } catch (error) {
+      alert("Erro ao atualizar favorito")
+      throw error
+    }
+  }
 }
 
 export default api
