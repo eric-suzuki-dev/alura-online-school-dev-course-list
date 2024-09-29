@@ -1,3 +1,4 @@
+
 {
   "pensamentos": [
     {
@@ -19,7 +20,7 @@
       "favorito": true,
       "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
       "autoria": "Chaves",
-      "data": "2024-08-03T00:00:00.000Z"
+      "data": "2024-08-12T00:00:00.000Z"
     },
     {
       "id": "b807",
@@ -95,6 +96,24 @@
       "conteudo": "Testando formato de data",
       "autoria": "Dev",
       "data": "2024-08-01"
+    },
+    {
+      "id": "0956",
+      "conteudo": "novo teste de datas",
+      "autoria": "dev",
+      "data": "2024-09-12T00:00:00.000Z"
+    },
+    {
+      "id": "c9c6",
+      "conteudo": "fewfewf",
+      "autoria": "etfewgt",
+      "data": "2024-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "Hello World",
+      "conteudo": "dev",
+      "autoria": "etfewgt",
+      "data": "2024-08-07T00:00:00.000Z"
     }
   ]
 }
