@@ -95,6 +95,12 @@
       "conteudo": "Testando formato de data",
       "autoria": "Dev",
       "data": "2024-08-01"
+    },
+    {
+      "id": "0956",
+      "conteudo": "novo teste de datas",
+      "autoria": "dev",
+      "data": "2024-09-12T00:00:00.000Z"
     }
   ]
 }
