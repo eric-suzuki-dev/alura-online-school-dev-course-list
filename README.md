@@ -16,7 +16,6 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 
 <br>
 
----
 
 ## Getting Started
 
