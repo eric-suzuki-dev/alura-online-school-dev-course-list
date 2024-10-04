@@ -121,6 +121,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [16-trato-tech-thunk-part-01](./react/16-trato-tech-thunk-part-01)
 - [17-trato-tech-thunk-part-02](./react/17-trato-tech-thunk-part-02)
 - [18-trato-tech-thunk-saga-part-03](./react/18-trato-tech-thunk-saga-part-03)
+  
+- [35-React: Testing a Project with External Libraries](./react/35-trato-tech-testes)
 
 <br>
 
