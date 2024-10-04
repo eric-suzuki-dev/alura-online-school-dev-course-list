@@ -1,9 +1,12 @@
 import Home from '.';
-import { render } from '../../test-utils';
+import { render, screen } from '../../test-utils';
 
 describe('Testando página Home', () => {
-  test('testando', () => {
-    render( <Home />);
+  test('deve renderizar com categorias', () => {
+    render(<Home />);
+    const categorias = screen.getAllByTestId('home-categorias');
+
+    expect(categorias).toHaveLength(5);
     expect(true).toBeTruthy();
   })
 })
