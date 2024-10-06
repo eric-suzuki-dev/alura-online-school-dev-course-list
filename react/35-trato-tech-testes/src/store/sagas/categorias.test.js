@@ -2,6 +2,7 @@ import { call, cancel, take } from 'redux-saga/effects';
 import { categoriasSaga, observarCategorias } from './categorias';
 import categoriasService from 'services/categorias';
 import { adicionarTodasAsCategorias } from 'store/reducers/categorias';
+import { createMockTask } from '@redux-saga/testing-utils';
 
 describe('Testando categorias saga', () => {
   describe('workers', () => {
@@ -17,13 +18,20 @@ describe('Testando categorias saga', () => {
     })
   })
   describe('watchers', () => {
-    test('Deve executar corretamente', () => {
+    test('Deve executar a tarefa corretamente', () => {
       const funcaoGeradora = categoriasSaga();
-      const tarefa = funcaoGeradora.next();
+      funcaoGeradora.next();
       const funcaoEsperada = take(adicionarTodasAsCategorias);
-      const funcaoCancelarEsperada = cancel(tarefa.value);
 
       expect(funcaoGeradora.next().value).toEqual(funcaoEsperada);
+    })
+    test('Deve executar a tarefa apenas uma vez', () => {
+      const funcaoGeradora = categoriasSaga();
+      const mockTarefa = createMockTask();
+      funcaoGeradora.next(mockTarefa);
+      const funcaoCancelarEsperada = cancel(mockTarefa.cancel());
+      funcaoGeradora.next();
+
       expect(funcaoGeradora.next().value).toEqual(funcaoCancelarEsperada);
     })
   })
