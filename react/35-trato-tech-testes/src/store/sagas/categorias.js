@@ -5,7 +5,7 @@ import categoriasService from 'services/categorias';
 
 const { toast } = createStandaloneToast();
 
-function* observarCategorias() {
+export function* observarCategorias() {
   toast({
     title: 'Carregando',
     description: 'Carregando categorias',
