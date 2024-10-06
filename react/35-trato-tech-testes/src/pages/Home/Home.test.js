@@ -1,17 +1,27 @@
+import { rotaAnuncie } from '../../routes';
 import Home from '.';
 import { render, screen } from '../../test-utils';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('services/categorias');
+const mockNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate
+}))
 
 describe('Testando página Home', () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  })
   describe('Anuncie', () => {
     test('Deve redirecionar para a página anuncie', () => {
+      render(<Home />);
       const botaoAnuncie = screen.getByTestId('home-botao-anunciar');
 
       userEvent.click(botaoAnuncie);
 
-      expect(?).toHaveBeenCalledWith('/anuncie');
+      expect(mockNavigate).toHaveBeenCalledWith(`/${rotaAnuncie}`);
     })
   })
 
