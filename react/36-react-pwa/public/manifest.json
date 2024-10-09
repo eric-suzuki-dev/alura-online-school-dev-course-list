@@ -1,0 +1,11 @@
+{
+    "id":"/",
+    "name": "Jornada Milhas",
+    "short_name": "Jornada",
+    "theme_color": "#5a189a",
+    "background_color": "#09001a",
+    "display": "standalone",
+    "description": "Site do Jornada Milhas",
+    "orientation": "portrait",
+    "start_url": "/"
+  }
