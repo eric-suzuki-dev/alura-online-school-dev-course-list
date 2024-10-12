@@ -1,5 +1,7 @@
 <img src="assets/images/Alura.png" alt="Alura Banner">
 
+<br>
+
 # Front-End Programming Lessons
 
 Welcome to the **Front-End Programming Lessons** repository! This repository contains a comprehensive collection of lessons and materials to help you learn and master front-end development, provided by [Alura](https://www.alura.com.br/). Each topic is organized into its own folder, containing relevant exercises, examples, and projects.
