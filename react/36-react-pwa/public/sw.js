@@ -9,6 +9,25 @@ self.addEventListener("install", (event) => {
   );
 });
 
-self.addEventListener("fetch",(event)=>{
-  console.log(`Baixando ${event.request.url}`)
-})
+self.addEventListener("fetch", (event) => {
+  console.log(`Baixando ${event.request.url}`);
+  event.respondWith(cachePrimeiro(event.request));
+});
+
+const cachePrimeiro = async (request) => {
+  const respostaDoCache = await caches.match(request);
+
+  if (respostaDoCache) {
+    return respostaDoCache;
+  }
+
+  const respostaRede = await fetch(request);
+  atualizaCache(request, respostaRede.clone());
+
+  return respostaRede;
+};
+
+const atualizaCache = async (request, response) => {
+  const cache = await caches.open(CACHE_NAME);
+  await cache.put(request, response);
+};
