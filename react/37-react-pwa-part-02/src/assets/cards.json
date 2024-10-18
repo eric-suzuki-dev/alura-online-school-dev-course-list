@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "imagem": "/cards-image/atacama.png",
+    "alt": "Veículo amarelo em uma estrada no meio do deserto",
+    "titulo": "Atravesse o Deserto no Chile",
+    "data_ida": "2024-07-01",
+    "data_volta": "2024-07-10",
+    "origem": "São Paulo",
+    "destino": "Chile",
+    "tipo": "Pacote Completo",
+    "valor": 3769
+  },
+  {
+    "id": "2",
+    "imagem": "/cards-image/cordilheira-dos-andes.png",
+    "alt": "Homem ao centro e ao fundo montanhas congeladas",
+    "titulo": "Visite a Cordilheira dos Andes",
+    "data_ida": "2024-08-15",
+    "data_volta": "2024-08-22",
+    "origem": "Belo Horizonte",
+    "destino": "Chile",
+    "tipo": "Excursão",
+    "valor": 4638
+  },
+  {
+    "id": "3",
+    "imagem": "/cards-image/grand-canyon.png",
+    "alt": "Mulher de chapéu e mochila contemplando o Gran Canion",
+    "titulo": "Aprecie a história geológica",
+    "data_ida": "2024-09-10",
+    "data_volta": "2024-09-25",
+    "origem": "Rio de Janeiro",
+    "destino": "Grand Canion",
+    "tipo": "Pacote de Viagem",
+    "valor": 5769
+  },
+  {
+    "id": "4",
+    "imagem": "/cards-image/patagonia.png",
+    "alt": "Homem de chapéu em um lado azul em meio a montanhas congeladas",
+    "titulo": "Conheça a Terra do Fogo",
+    "data_ida": "2024-11-05",
+    "data_volta": "2024-11-15",
+    "origem": "Miami",
+    "destino": "Patagonia",
+    "tipo": "Cruzeiro",
+    "valor": 5837
+  },
+  {
+    "id": "5",
+    "imagem": "/cards-image/turquia.png",
+    "alt": "Balões de várias cores e tamanham passeiam pelo céu",
+    "titulo": "Aprecie a terra dos balões",
+    "data_ida": "2024-10-20",
+    "data_volta": "2024-10-25",
+    "origem": "Curitiba",
+    "destino": "Turquia",
+    "tipo": "Turismo",
+    "valor": 1000
+  },
+  {
+    "id": "6",
+    "imagem": "/cards-image/veneza.png",
+    "alt": "Ponte na cidade de Veneza. Embaixo da ponte um lado onde embarcações navegam",
+    "titulo": "Navegue pelos canais de Veneza",
+    "data_ida": "2024-12-20",
+    "data_volta": "2024-12-25",
+    "origem": "São Paulo",
+    "destino": "Veneza",
+    "tipo": "Pacote de Lua de Mel",
+    "valor": 2946
+  }
+]
