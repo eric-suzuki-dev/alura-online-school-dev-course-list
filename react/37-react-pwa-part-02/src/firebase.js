@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,7 +20,7 @@ const messaging = getMessaging();
 
 export const requestToken = async () => {
   try {
-    const currentToken = getToken(messaging, {
+    const currentToken = await getToken(messaging, {
       vapidKey:
         "BPfatJ-3HYZ-NvW1Bn4UEgrHiT-simYQT3VsevfJPvXuJUE_FLeJoXHgywDImJqXE4Xtp0oQvQqOJrnLUvFDiVs",
     });
@@ -33,3 +33,11 @@ export const requestToken = async () => {
     console.log(err);
   }
 };
+
+export const onMessageListener = () =>
+  new Promise((resolve) => {
+    onMessage(messaging, (payload) => {
+      console.log("Payload", payload);
+      resolve(payload);
+    });
+  });

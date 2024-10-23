@@ -6,7 +6,7 @@ import NotificationButton from "./components/NotificationButton";
 import { requestToken } from "./firebase";
 
 function App() {
-  const { sendTestNotification } = useNotification();
+  
   return (
     <>
       <Header />
