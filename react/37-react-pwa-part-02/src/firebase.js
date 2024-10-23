@@ -37,7 +37,12 @@ export const requestToken = async () => {
 export const onMessageListener = () =>
   new Promise((resolve) => {
     onMessage(messaging, (payload) => {
-      console.log("Payload", payload);
+      console.log("Notificação em primeiro plano", payload.notification);
+      const notificationTitle = payload.notification.title;
+      const notificationOptions = {
+        body: payload.notification.body,
+      };
+      new Notification(notificationTitle, notificationOptions);
       resolve(payload);
     });
   });
