@@ -18,7 +18,6 @@ Welcome to the **Front-End Programming Lessons** repository! This repository con
 
 <br>
 
-
 ## Getting Started
 
 To get started with the lessons, clone this repository to your local machine:
@@ -125,6 +124,9 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [18-trato-tech-thunk-saga-part-03](./react/18-trato-tech-thunk-saga-part-03)
   
 - [35-React: Testing a Project with External Libraries](./react/35-trato-tech-testes)
+
+***PWA***
+
 - [36-React: Turn Your Web Application into a PWA](./react/36-react-pwa-part-01)
 - [37-React: Implement Push Notifications and Background Sync](./react/37-react-pwa-part-02)
 
