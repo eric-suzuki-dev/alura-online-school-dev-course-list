@@ -1,35 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ToastDisplay from "../components/ToastDisplay";
 
-const useNotification = () => {
-  const requestNotificationPermission = async () => {
-    const permission = await Notification.requestPermission();
-
-    if (permission !== "granted") {
-      alert("Permissão não concedida");
-    }
-  };
-
-  const sendNotification = (title, options) => {
-    if (Notification.permission === "granted") {
-      new Notification(title, options);
-    } else {
-      alert("Permissão para notificações não concedida");
-    }
-  };
-
-  const sendTestNotification = () => {
-    const options = {
-      body: "Notificação teste",
-      icon: "/icon-192x192.png",
-    };
-    sendNotification("Titulo legal", options);
-  };
-
-  useEffect(() => {
-    requestNotificationPermission();
+const useFirebaseNotification = () => {
+  const [notification, setNotification] = useState({
+    title: "",
+    body: "",
   });
 
-  return { sendTestNotification };
+  const notify = () => toast(<ToastDisplay notification={notification} />);
+
+  return {};
 };
 
-export default useNotification;
+export default useFirebaseNotification;
