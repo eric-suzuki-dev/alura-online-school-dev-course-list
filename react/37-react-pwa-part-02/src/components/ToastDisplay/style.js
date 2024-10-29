@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Title = styled.h3`
   font-size: 24px;
   font-weight: 500;
+  color: #5a189a
 `;
 export const Body = styled.p`
   font-size: 16px;

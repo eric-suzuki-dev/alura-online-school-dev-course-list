@@ -1,20 +1,30 @@
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
-import useNotification from "./hooks/useNotification";
 import NotificationButton from "./components/NotificationButton";
-import { onMessageListener, requestToken } from "./firebase";
-import { useEffect } from "react";
+import { requestToken } from "./firebase";
 import { ToastContainer } from "react-toastify";
+import useFirebaseNotification from "./hooks/useFirebaseNotification";
+import styled from "styled-components";
+
+const StyledToastContainer = styled(ToastContainer)`
+  .Toastify-toast {
+    font-size: 16px,
+    font-weight: 600
+
+    &-theme--light {
+      background: #ffffff;
+      color: #5a189a;
+    }
+  }
+`;
 
 function App() {
-  useEffect(() => {
-    onMessageListener();
-  }, []);
+  const {} = useFirebaseNotification();
   return (
     <>
       <Header />
-      <ToastContainer />
+      <StyledToastContainer />
       <NotificationButton action={requestToken} />
       <Outlet />
       <Footer />
