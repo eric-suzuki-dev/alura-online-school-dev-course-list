@@ -11,7 +11,12 @@ const useFirebaseNotification = () => {
   });
 
   useEffect(() => {
-    const notify = () => toast(<ToastDisplay notification={notification} />);
+    const notify = () =>
+      toast(<ToastDisplay notification={notification} />, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+      });
 
     if (notification.title) {
       notify();
