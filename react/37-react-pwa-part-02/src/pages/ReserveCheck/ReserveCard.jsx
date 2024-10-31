@@ -1,8 +1,38 @@
 /* eslint-disable react/prop-types */
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button/index";
 import * as Styled from "./styles";
 
 const ReserveCard = ({ card }) => {
+  const navigate = useNavigate();
+  const handleReserva = async () => {
+    const reservationData = {
+      data_ida: card.data_ida,
+      data_volta: card.data_volta,
+      origem: card.origem,
+      destino: card.destino,
+      tipo: card.tipo,
+    };
+
+    try {
+      const resposta = await fetch("http://localhost:3000/reservas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reservationData),
+      });
+
+      if (!resposta.ok) {
+        throw new Error("Erro ao enviar dados da reserva");
+      }
+
+      navigate("/reservas/finish");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <Styled.Card>
       <div>
@@ -23,7 +53,7 @@ const ReserveCard = ({ card }) => {
       <div>
         <Styled.Heading2>Valor final</Styled.Heading2>
         <Styled.Price>R$ {card.valor}</Styled.Price>
-        <Button>Concluir reserva</Button>
+        <Button onClick={handleReserva}>Concluir reserva</Button>
       </div>
     </Styled.Card>
   );
