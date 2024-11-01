@@ -1,12 +1,28 @@
 {
-    "reservas": [
-      {
-        "data_ida": "2024-07-01",
-        "data_volta": "2024-07-10",
-        "origem": "São Paulo",
-        "destino": "Chile",
-        "tipo": "Pacote Completo",
-        "id": 1
-      }
-    ]
-  }
+  "reservas": [
+    {
+      "data_ida": "2024-07-01",
+      "data_volta": "2024-07-10",
+      "origem": "São Paulo",
+      "destino": "Chile",
+      "tipo": "Pacote Completo",
+      "id": 1
+    },
+    {
+      "data_ida": "2024-07-01",
+      "data_volta": "2024-07-10",
+      "origem": "São Paulo",
+      "destino": "Chile",
+      "tipo": "Pacote Completo",
+      "id": 2
+    },
+    {
+      "data_ida": "2024-08-15",
+      "data_volta": "2024-08-22",
+      "origem": "Belo Horizonte",
+      "destino": "Chile",
+      "tipo": "Excursão",
+      "id": 3
+    }
+  ]
+}

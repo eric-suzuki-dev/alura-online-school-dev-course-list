@@ -4,6 +4,26 @@ import { ExpirationPlugin } from "workbox-expiration";
 import { cleanupOutdatedCaches, precacheAndRoute } from "workbox-precaching";
 import { Route, registerRoute } from "workbox-routing";
 import { NetworkFirst, StaleWhileRevalidate } from "workbox-strategies";
+import { Queue } from "workbox-background-sync";
+
+const queue = new Queue("testSyncQueue");
+
+self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "POST") {
+    return;
+  }
+
+  const bgSync = async () => {
+    try {
+      const response = await fetch(event.request.clone());
+      return response;
+    } catch (err) {
+      await queue.pushRequest({ request: event.request });
+    }
+  };
+
+  event.respondWith(bgSync());
+});
 
 self.skipWaiting();
 clientsClaim();
