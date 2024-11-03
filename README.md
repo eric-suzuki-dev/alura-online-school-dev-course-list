@@ -130,6 +130,10 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [36-React: Turn Your Web Application into a PWA](./react/36-react-pwa-part-01)
 - [37-React: Implement Push Notifications and Background Sync](./react/37-react-pwa-part-02)
 
+***Micro-Frontends Courses: Implementing Architecture with Single SPA***
+
+- [38-Single SPA: Orchestrating Micro-Frontends](./react/38-home-hub-part-01)
+
 <br>
 
 ### NEXT
