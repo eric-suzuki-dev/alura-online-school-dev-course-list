@@ -7,7 +7,7 @@ import WaterCard from './components/WaterCard';
 export default function Root() {
 	return (
 		<Box
-			width={2 / 3}
+			width={3 / 4}
 			my={4}
 			display='flex'
 			alignItems='center'
