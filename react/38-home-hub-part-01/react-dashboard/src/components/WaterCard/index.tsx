@@ -1,11 +1,12 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { Typography } from '@mui/material';
 
 const WaterCard = () => {
 	return (
-		<Card>
+		<Card sx={{ background: '#F5F5F5' }}>
 			<CardContent>
-				<h2>Water Card</h2>
+				<Typography>Water Card</Typography>
 			</CardContent>
 		</Card>
 	);

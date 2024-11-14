@@ -1,11 +1,25 @@
+import { Box, Typography } from '@mui/material';
+
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import VisaoGeral from '../../assets/visao-geral.png';
 
 const HeroCard = () => {
 	return (
-		<Card sx={{ background: '#F5F5F5' }}>
+		<Card sx={{ background: '#FFF3E0' }}>
 			<CardContent>
-				<h2>Hero Card</h2>
+				<Box
+					display={'flex'}
+					flexDirection={'row'}
+					alignItems={'center'}
+					justifyContent={'space-evenly'}
+				>
+					<Box>
+						<Typography variant='h5'>Olá, usuário!</Typography>
+						<Typography>Confira as informações da sua casa inteligente!</Typography>
+					</Box>
+					<img src={VisaoGeral} alt='Visão Geral' height={140} />
+				</Box>
 			</CardContent>
 		</Card>
 	);
