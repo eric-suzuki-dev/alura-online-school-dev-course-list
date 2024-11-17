@@ -12,6 +12,12 @@ registerApplication({
 	activeWhen: (location) => location.pathname.includes('/'),
 });
 
+registerApplication({
+	name: '@home-hub/react-login',
+	app: () => System.import<LifeCycles>('@home-hub/react-login'),
+	activeWhen: (location) => location.pathname === '/',
+});
+
 start({
 	urlRerouteOnly: true,
 });
