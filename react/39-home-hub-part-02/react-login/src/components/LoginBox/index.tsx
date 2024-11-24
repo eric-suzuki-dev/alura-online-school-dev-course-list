@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
 
+import HomeHubLogo from '../assets/logo.png';
 import LoginForm from '../LoginForm';
 
 const LoginBox = () => {
@@ -16,7 +17,7 @@ const LoginBox = () => {
 					flexDirection: 'column',
 				}}
 			>
-				<Typography>HomeHub</Typography>
+				<img src={HomeHubLogo} alt='logo' width={140} style={{ marginTop: 36 }} />
 				<Typography>Log In</Typography>
 				<Typography>Insira seus dados para acessar o hub.</Typography>
 				<LoginForm />
