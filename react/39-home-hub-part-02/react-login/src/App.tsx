@@ -1,5 +1,9 @@
-import { Typography } from '@mui/material';
+import LoginBox from './components/LoginBox';
 
-export default function Root(props) {
-	return <Typography>Hello world!</Typography>;
+export default function Root() {
+	return (
+		<div>
+			<LoginBox />
+		</div>
+	);
 }
