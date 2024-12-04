@@ -8,7 +8,11 @@ type FormValues = {
 };
 
 const LoginForm = () => {
-	const { register, handleSubmit } = useForm<FormValues>();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<FormValues>();
 
 	// eslint-disable-next-line no-console
 	const onSubmit = (data) => console.log(data);
@@ -19,14 +23,21 @@ const LoginForm = () => {
 				label='Email'
 				variant='standard'
 				sx={{ marginTop: '16px', marginX: '16px' }}
-				{...register('email')}
+				error={!!errors.email}
+				helperText={errors.email?.message}
+				{...register('email', {
+					required: 'Campo de e-mail obrigatório.',
+					pattern: { value: /\S+@\S+\.\S+/, message: 'E-mail inválido.' },
+				})}
 			/>
 			<TextField
 				id='password'
 				label='Password'
 				variant='standard'
 				sx={{ marginTop: '16px', marginX: '16px' }}
-				{...register('password')}
+				error={!!errors.password}
+				helperText={errors.password?.message}
+				{...register('password', { required: 'Senha obrigatória.' })}
 			/>
 			<Button
 				variant='contained'
