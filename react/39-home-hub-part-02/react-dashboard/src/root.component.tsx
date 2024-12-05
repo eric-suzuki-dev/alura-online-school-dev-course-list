@@ -1,10 +1,22 @@
 import { Box, Grid } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 import HeroCard from './components/HeroCard';
 import UsersCard from './components/UsersCard';
 import WaterCard from './components/WaterCard';
 
 export default function Root() {
+	const [authInfo, setAuthInfo] = useState();
+
+	useEffect(() => {
+		const auth = localStorage.getItem('auth');
+		if (!auth) {
+			return location.replace('/');
+		}
+		setAuthInfo(JSON.parse(auth));
+		console.log('authInfo', auth);
+	}, []);
+
 	return (
 		<div id='single-spa-application:react-dashboard'>
 			<Box

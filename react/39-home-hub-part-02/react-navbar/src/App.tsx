@@ -14,6 +14,7 @@ import {
 	MenuItem,
 	Toolbar,
 } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 import { AccountCircle } from '@mui/icons-material';
 import HomeHubLogo from './assets/home-hub.png';
@@ -24,10 +25,20 @@ import PersonIcon from '@mui/icons-material/Person';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import WifiIcon from '@mui/icons-material/Wifi';
-import { useState } from 'react';
 
 export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+	const [authInfo, setAuthInfo] = useState();
+
+	useEffect(() => {
+		const auth = localStorage.getItem('auth');
+		if (!auth) {
+			return location.replace('/');
+		}
+		setAuthInfo(JSON.parse(auth));
+		console.log('authInfo', auth);
+	}, []);
+
 	const isMenuOpen = Boolean(anchorEl);
 
 	const [open, setOpen] = useState(false);
