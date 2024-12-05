@@ -14,8 +14,11 @@ const LoginForm = () => {
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	// eslint-disable-next-line no-console
-	const onSubmit = (data) => console.log(data);
+	const onSubmit = (data: FormValues) => {
+		const authId = data.email.replace('@', '').replace('.', '').codePointAt(0);
+		location.replace(`/dashboard/${authId}/`);
+	};
+
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
 			<TextField
