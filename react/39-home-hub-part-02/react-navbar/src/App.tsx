@@ -28,7 +28,7 @@ import WifiIcon from '@mui/icons-material/Wifi';
 
 export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const [authInfo, setAuthInfo] = useState();
+	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
 
 	useEffect(() => {
 		const auth = localStorage.getItem('auth');
@@ -36,7 +36,6 @@ export default function App() {
 			return location.replace('/');
 		}
 		setAuthInfo(JSON.parse(auth));
-		console.log('authInfo', auth);
 	}, []);
 
 	const isMenuOpen = Boolean(anchorEl);
@@ -109,7 +108,7 @@ export default function App() {
 			open={isMenuOpen}
 			onClose={handleMenuClose}
 		>
-			<MenuItem onClick={handleMenuClose}>Usuário</MenuItem>
+			<MenuItem onClick={handleMenuClose}>{authInfo?.email}</MenuItem>
 			<Divider />
 			<ListItem disablePadding onClick={handleMenuClose}>
 				<ListItemButton>
