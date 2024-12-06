@@ -17,9 +17,11 @@ const LoginBox = () => {
 					flexDirection: 'column',
 				}}
 			>
-				<img src={HomeHubLogo} alt='logo' width={140} style={{ marginTop: 36 }} />
-				<Typography>Log In</Typography>
-				<Typography>Insira seus dados para acessar o hub.</Typography>
+				<img src={HomeHubLogo} alt='logo' width={140} style={{ marginTop: 36, marginBottom: 36 }} />
+				<Typography sx={{ fontSize: 18, fontWeight: 700 }}>Log In</Typography>
+				<Typography sx={{ fontSize: 14, fontWeight: 400 }}>
+					Insira seus dados para acessar o hub.
+				</Typography>
 				<LoginForm />
 			</Box>
 		</Container>

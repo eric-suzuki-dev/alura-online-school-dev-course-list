@@ -6,7 +6,7 @@ import UsersCard from './components/UsersCard';
 import WaterCard from './components/WaterCard';
 
 export default function Root() {
-	const [authInfo, setAuthInfo] = useState();
+	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
 
 	useEffect(() => {
 		const auth = localStorage.getItem('auth');

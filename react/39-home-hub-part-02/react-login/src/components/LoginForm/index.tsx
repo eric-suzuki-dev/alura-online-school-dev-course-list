@@ -26,7 +26,7 @@ const LoginForm = () => {
 				id='email'
 				label='Email'
 				variant='standard'
-				sx={{ marginTop: '16px', marginX: '16px' }}
+				sx={{ marginTop: '16px', marginX: '32px' }}
 				error={!!errors.email}
 				helperText={errors.email?.message}
 				{...register('email', {
@@ -38,14 +38,15 @@ const LoginForm = () => {
 				id='password'
 				label='Password'
 				variant='standard'
-				sx={{ marginTop: '16px', marginX: '16px' }}
+				type='password'
+				sx={{ marginTop: '16px', marginX: '32px' }}
 				error={!!errors.password}
 				helperText={errors.password?.message}
 				{...register('password', { required: 'Senha obrigatória.' })}
 			/>
 			<Button
 				variant='contained'
-				sx={{ backgroundColor: '#9C27B0', marginTop: '20px', marginX: '16px' }}
+				sx={{ backgroundColor: '#9C27B0', marginTop: '20px', marginX: '32px' }}
 				onClick={handleSubmit(onSubmit)}
 			>
 				Login
