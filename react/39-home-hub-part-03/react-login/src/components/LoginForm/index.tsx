@@ -1,5 +1,6 @@
 import { Box, Button, TextField } from '@mui/material';
 
+import { loginFunction } from '../../../../utils/src/home-hub-utils';
 import { useForm } from 'react-hook-form';
 
 type FormValues = {
@@ -14,11 +15,7 @@ const LoginForm = () => {
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	const onSubmit = (data: FormValues) => {
-		const authId = data.email.replace('@', '').replace('.', '').codePointAt(0);
-		localStorage.setItem('auth', JSON.stringify(data));
-		location.replace(`/dashboard/${authId}/`);
-	};
+	const onSubmit = (data: FormValues) => loginFunction(data);
 
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
