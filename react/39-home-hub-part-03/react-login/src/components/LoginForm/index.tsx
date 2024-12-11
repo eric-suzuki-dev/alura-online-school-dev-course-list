@@ -15,7 +15,7 @@ const LoginForm = () => {
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	const onSubmit = (data: FormValues) => loginFunction(data);
+	const onSubmit = (data: FormValues) => loginFunction(data.email);
 
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
