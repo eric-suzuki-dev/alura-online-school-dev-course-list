@@ -25,17 +25,16 @@ import PersonIcon from '@mui/icons-material/Person';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import WifiIcon from '@mui/icons-material/Wifi';
+import { checkIsAuthenticated } from '../../utils/src/home-hub-utils';
 
 export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
 
 	useEffect(() => {
-		const auth = localStorage.getItem('auth');
-		if (!auth) {
-			return location.replace('/');
-		}
-		setAuthInfo(JSON.parse(auth));
+		const { isAuthenticated, authInfo } = checkIsAuthenticated();
+		if (!isAuthenticated) return location.replace('/');
+		setAuthInfo(authInfo);
 	}, []);
 
 	const isMenuOpen = Boolean(anchorEl);
