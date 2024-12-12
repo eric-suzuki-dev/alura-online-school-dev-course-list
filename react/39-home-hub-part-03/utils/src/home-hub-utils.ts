@@ -4,7 +4,10 @@ export const loginFunction = (email: string) => {
 	return location.replace(`/dashboard/${authId}/`);
 };
 
-export const checkIsAuthenticated = () => {
+export const checkIsAuthenticated = (): {
+	isAuthenticated: boolean;
+	authInfo: undefined | { email: string; firstName?: string; lastName?: string };
+} => {
 	const auth = localStorage.getItem('auth');
 	if (!auth) {
 		return { isAuthenticated: false, authInfo: undefined };
