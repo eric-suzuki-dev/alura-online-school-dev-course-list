@@ -29,7 +29,9 @@ import { checkIsAuthenticated } from '../../utils/src/home-hub-utils';
 
 export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
+	const [authInfo, setAuthInfo] = useState<
+		{ email: string; firstName?: string; lastName?: string } | undefined
+	>();
 
 	useEffect(() => {
 		const { isAuthenticated, authInfo } = checkIsAuthenticated();
