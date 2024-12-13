@@ -1,3 +1,4 @@
+import { AuthInfo, checkIsAuthenticated } from '../../utils/src/home-hub-utils';
 import { Box, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 
@@ -6,15 +7,14 @@ import UsersCard from './components/UsersCard';
 import WaterCard from './components/WaterCard';
 
 export default function Root() {
-	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
+	const [authInfo, setAuthInfo] = useState<AuthInfo | undefined>();
 
 	useEffect(() => {
-		const auth = localStorage.getItem('auth');
-		if (!auth) {
+		const { isAuthenticated, authInfo: authObj } = checkIsAuthenticated();
+		if (!isAuthenticated) {
 			return location.replace('/');
 		}
-		setAuthInfo(JSON.parse(auth));
-		console.log('authInfo', auth);
+		setAuthInfo(authObj);
 	}, []);
 
 	return (
