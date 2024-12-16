@@ -14,7 +14,7 @@ import {
 	MenuItem,
 	Toolbar,
 } from '@mui/material';
-import { AuthInfo, checkIsAuthenticated } from '../../utils/src/home-hub-utils';
+import { AuthInfo, checkIsAuthenticated, logoutFunction } from '../../utils/src/home-hub-utils';
 import { useEffect, useState } from 'react';
 
 import { AccountCircle } from '@mui/icons-material';
@@ -31,13 +31,13 @@ export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 	const [authInfo, setAuthInfo] = useState<AuthInfo | undefined>();
 
-	// useEffect(() => {
-	// 	const { isAuthenticated, authInfo: authObj } = checkIsAuthenticated();
-	// 	if (!isAuthenticated) {
-	// 		return location.replace('/');
-	// 	}
-	// 	setAuthInfo(authObj);
-	// }, []);
+	useEffect(() => {
+		const { isAuthenticated, authInfo: authObj } = checkIsAuthenticated();
+		if (!isAuthenticated) {
+			return location.replace('/');
+		}
+		setAuthInfo(authObj);
+	}, []);
 
 	const isMenuOpen = Boolean(anchorEl);
 
@@ -128,7 +128,7 @@ export default function App() {
 				</ListItemButton>
 			</ListItem>
 			<Divider />
-			<ListItem disablePadding onClick={handleMenuClose}>
+			<ListItem disablePadding onClick={logoutFunction}>
 				<ListItemButton>
 					<ListItemIcon>
 						<LogoutIcon />

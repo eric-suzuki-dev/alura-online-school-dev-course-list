@@ -1,16 +1,24 @@
-export const loginFunction = (email: string) => {
-	const authId = email.replace('@', '').replace('.', '').codePointAt(0);
-	localStorage.setItem('auth', JSON.stringify({ email: email }));
-	return location.replace(`/dashboard/${authId}/`);
+export type AuthInfo = {
+	email: string;
+	firstName?: string;
+	lastName?: string;
 };
 
-export const checkIsAuthenticated = (): {
-	isAuthenticated: boolean;
-	authInfo: undefined | { email: string; firstName?: string; lastName?: string };
-} => {
+export const loginFunction = (email: AuthInfo['email']) => {
+	const authId = email.replace('@', '').replace('.', '').codePointAt(0);
+	localStorage.setItem('auth', JSON.stringify({ email: email }));
+	location.replace(`/dashboard/${authId}/`);
+};
+
+export const logoutFunction = () => {
+	return location.replace('/');
+};
+
+export const checkIsAuthenticated = () => {
 	const auth = localStorage.getItem('auth');
 	if (!auth) {
-		return { isAuthenticated: false, authInfo: undefined };
+		return { authInfo: undefined, isAuthenticated: false };
 	}
-	return { isAuthenticated: true, authInfo: JSON.parse(auth) };
+	const authObj: AuthInfo = JSON.parse(auth);
+	return { authInfo: authObj, isAuthenticated: true };
 };
