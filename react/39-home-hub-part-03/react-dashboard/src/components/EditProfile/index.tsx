@@ -1,18 +1,19 @@
+import { AuthInfo, checkIsAuthenticated, editAuthInfo } from '../../../../utils/src/home-hub-utils';
 import { Box, Button, TextField } from '@mui/material';
 
-import { AuthInfo } from '../../../../utils/src/home-hub-utils';
 import { useForm } from 'react-hook-form';
 
 type FormValues = Omit<AuthInfo, 'authId'>;
 
 const EditProfile = () => {
+	const { authInfo } = checkIsAuthenticated();
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
-	} = useForm<FormValues>();
+	} = useForm<FormValues>({ defaultValues: authInfo });
 
-	const onSubmit = (data: FormValues) => console.log(data);
+	const onSubmit = (data: FormValues) => editAuthInfo({ ...data, authId: authInfo.authId });
 
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
