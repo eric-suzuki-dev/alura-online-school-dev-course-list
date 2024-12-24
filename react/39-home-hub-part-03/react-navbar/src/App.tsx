@@ -109,7 +109,9 @@ export default function App() {
 			open={isMenuOpen}
 			onClose={handleMenuClose}
 		>
-			<MenuItem onClick={handleMenuClose}>{authInfo?.email}</MenuItem>
+			<MenuItem onClick={handleMenuClose}>
+				{!!authInfo?.firstName ? `${authInfo?.firstName} ${authInfo?.lastName}` : authInfo?.email}
+			</MenuItem>
 			<Divider />
 			<ListItem disablePadding onClick={handleMenuClose}>
 				<ListItemButton>
