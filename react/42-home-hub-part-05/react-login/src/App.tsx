@@ -14,11 +14,7 @@ export default function Root() {
 			}}
 		>
 			<LoginBox />
-			<Parcel
-				config={() => System.import('@home-hub/react-parcel') as any}
-				wrapWith='h1'
-				customProp1='hello world custom prop'
-			/>
+			<Parcel config={() => System.import('@home-hub/react-parcel') as any} />
 		</div>
 	);
 }

@@ -1,4 +1,3 @@
-export default function Parcel(props) {
-	console.log('Parcel props:', props);
+export default function ParcelComponent() {
 	return <section>Hello World!</section>;
 }
