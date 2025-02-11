@@ -9,16 +9,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 
-interface ParcelProps {
-	title: string;
-	description: string;
-	leftBtnFn: () => void;
-	rightBtnFn: () => void;
-	leftBtnText: string;
-	rightBtnText: string;
-	isOpen: boolean;
-}
-
 const Transition = React.forwardRef(function Transition(
 	props: TransitionProps & {
 		children: React.ReactElement<any, any>;
@@ -28,43 +18,42 @@ const Transition = React.forwardRef(function Transition(
 	return <Slide direction='up' ref={ref} {...props} />;
 });
 
+interface ParcelProps {
+	title: string;
+	description: string;
+	leftBtnText: string;
+	rightBtnText: string;
+	leftBtnFn: () => void;
+	rightBtnFn: () => void;
+	isVisible: boolean;
+}
+
 export default function Parcel({
 	description,
-	isOpen,
+	isVisible,
 	leftBtnFn,
 	leftBtnText,
 	rightBtnFn,
 	rightBtnText,
 	title,
 }: ParcelProps) {
-	const [open, setOpen] = React.useState(isOpen);
-
-	const _leftBtnFn = () => {
-		leftBtnFn();
-		setOpen(false);
-	};
-
-	const _rightBtnFn = () => {
-		rightBtnFn();
-		setOpen(false);
-	};
-
 	return (
-		<Dialog
-			open={open}
-			TransitionComponent={Transition}
-			keepMounted
-			onClose={() => setOpen(false)}
-			aria-describedby='alert-dialog-slide-description'
-		>
-			<DialogTitle>{title}</DialogTitle>
-			<DialogContent>
-				<DialogContentText id='alert-dialog-slide-description'>{description}</DialogContentText>
-			</DialogContent>
-			<DialogActions>
-				<Button onClick={_leftBtnFn}>{leftBtnText}</Button>
-				<Button onClick={_rightBtnFn}>{rightBtnText}</Button>
-			</DialogActions>
-		</Dialog>
+		<React.Fragment>
+			<Dialog
+				open={isVisible}
+				TransitionComponent={Transition}
+				onClose={leftBtnFn}
+				aria-describedby='alert-dialog-slide-description'
+			>
+				<DialogTitle>{title}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id='alert-dialog-slide-description'>{description}</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={leftBtnFn}>{leftBtnText}</Button>
+					<Button onClick={rightBtnFn}>{rightBtnText}</Button>
+				</DialogActions>
+			</Dialog>
+		</React.Fragment>
 	);
 }
