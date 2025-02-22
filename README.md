@@ -133,6 +133,8 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 ***Micro-Frontends Courses: Implementing Architecture with Single SPA***
 
 - [38-Single SPA: Orchestrating Micro-Frontends](./react/38-home-hub-part-01)
+- [39-Single SPA: Advanced Micro Frontend Routing](./react/39-home-hub-part-02)
+- [40-Single SPA: Authenticating Micro Frontends](./react/40-home-hub-part-03)
 
 <br>
 
