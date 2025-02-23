@@ -136,6 +136,7 @@ git clone https://github.com/eric-suzuki-dev/Alura-Online-School-DEV-Course-List
 - [39-Single SPA: Advanced Micro Frontend Routing](./react/39-home-hub-part-02)
 - [40-Single SPA: Authenticating Micro Frontends](./react/40-home-hub-part-03)
 - [41-Single SPA: Advancing in Micro-Frontend Authentication](./react/41-home-hub-part-04)
+- [42-Single-SPA: Integrating Micro-Frontends with Parcels](./react/41-home-hub-part-05)
 
 <br>
 
